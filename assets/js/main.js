@@ -58,41 +58,51 @@
       btn.classList.toggle("is-active", btn.getAttribute("data-lang") === lang);
     });
 
+    renderBooks(dict);
     localStorage.setItem("lang", lang);
   }
 
-  // Attach the video source only when it nears the viewport.
-  function setupLazyVideo() {
-    var videos = document.querySelectorAll("video.lazy-video");
-    if (!videos.length) return;
-
-    function load(video) {
-      video.querySelectorAll("source[data-src]").forEach(function (s) {
-        s.src = s.getAttribute("data-src");
-        s.removeAttribute("data-src");
+  // Click-to-play facade: the heavy video downloads ONLY when the poster is
+  // clicked (better than loading on scroll for a big file).
+  function setupVideoFacades() {
+    document.querySelectorAll(".video-facade").forEach(function (facade) {
+      facade.addEventListener("click", function () {
+        var src = facade.getAttribute("data-video");
+        if (!src) return;
+        var video = document.createElement("video");
+        video.className = "facade-video";
+        video.setAttribute("controls", "");
+        video.setAttribute("playsinline", "");
+        video.setAttribute("autoplay", "");
+        var source = document.createElement("source");
+        source.src = src;
+        source.type = "video/mp4";
+        video.appendChild(source);
+        facade.replaceWith(video);
+        video.load();
+        var playing = video.play();
+        if (playing && playing.catch) playing.catch(function () {});
       });
-      video.load();
-    }
+    });
+  }
 
-    if (!("IntersectionObserver" in window)) {
-      // Old browsers: just load them.
-      videos.forEach(load);
+  // Build the "textbooks studied" list (locale-independent titles).
+  function renderBooks(dict) {
+    var ul = document.getElementById("books-list");
+    if (!ul) return;
+    ul.innerHTML = "";
+    var items = C.studyBooks || [];
+    if (!items.length) {
+      var empty = document.createElement("li");
+      empty.className = "book-empty";
+      empty.textContent = (dict.books && dict.books.empty) || "";
+      ul.appendChild(empty);
       return;
     }
-
-    var io = new IntersectionObserver(
-      function (entries, obs) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            load(entry.target);
-            obs.unobserve(entry.target);
-          }
-        });
-      },
-      { rootMargin: "300px 0px" } // start a bit before it's actually visible
-    );
-    videos.forEach(function (v) {
-      io.observe(v);
+    items.forEach(function (title) {
+      var li = document.createElement("li");
+      li.textContent = title;
+      ul.appendChild(li);
     });
   }
 
@@ -113,7 +123,7 @@
     });
 
     apply(pickLang());
-    setupLazyVideo();
+    setupVideoFacades();
   }
 
   if (document.readyState === "loading") {

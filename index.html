@@ -57,7 +57,7 @@
           <ul class="highlights">
             <li data-i18n="about.h1"></li>
             <li data-i18n="about.h2"></li>
-            <li data-i18n="about.h3"></li>
+            <li><span data-i18n="about.h3"></span> <a class="hl-link" href="https://bodygon.com" target="_blank" rel="noopener noreferrer">Bodygon&nbsp;↗</a></li>
             <li data-i18n="about.h4"></li>
           </ul>
         </div>
@@ -73,6 +73,14 @@
           <article class="card"><h3 data-i18n="services.s3t"></h3><p data-i18n="services.s3d"></p></article>
           <article class="card"><h3 data-i18n="services.s4t"></h3><p data-i18n="services.s4d"></p></article>
         </div>
+      </section>
+
+      <!-- BOOKS STUDIED -->
+      <section class="section" id="books">
+        <p class="kicker" data-i18n="books.kicker"></p>
+        <h2 class="section-title" data-i18n="books.title"></h2>
+        <p class="books-intro" data-i18n="books.intro"></p>
+        <ul class="book-list" id="books-list"></ul>
       </section>
 
       <!-- BOOK -->
@@ -92,30 +100,20 @@
           <p data-i18n="news.itemText"></p>
 
           <figure class="media">
-            <img
-              src="./assets/img/parisi-aos-course.jpg"
-              alt="Anatomy of Speed — Parisi certification course"
-              loading="lazy"
-              decoding="async"
-              width="1280"
-              height="888"
-            />
+            <!-- Click-to-play facade: the photo is the poster; the 18.7MB video
+                 downloads only when the user clicks it. See main.js. -->
+            <button type="button" class="video-facade" data-video="./assets/media/parisi-aos-clip.mp4" aria-label="Play video">
+              <img
+                src="./assets/img/parisi-aos-course.jpg"
+                alt="Anatomy of Speed — Parisi certification course"
+                loading="lazy"
+                decoding="async"
+                width="1280"
+                height="888"
+              />
+              <span class="play-icon" aria-hidden="true">▶</span>
+            </button>
             <figcaption data-i18n="news.captionPhoto"></figcaption>
-          </figure>
-
-          <figure class="media">
-            <!-- Lazy: the source is only attached (and the file downloaded) when
-                 the video scrolls near the viewport. See main.js. -->
-            <video
-              class="lazy-video"
-              controls
-              preload="none"
-              playsinline
-              poster="./assets/img/parisi-aos-course.jpg"
-            >
-              <source data-src="./assets/media/parisi-aos-clip.mp4" type="video/mp4" />
-            </video>
-            <figcaption data-i18n="news.captionVideo"></figcaption>
           </figure>
         </article>
       </section>

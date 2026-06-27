@@ -9,6 +9,9 @@ window.SITE_CONTENT = {
   // Locale-independent.
   links: { book: "https://bodygon.com/products/book", email: "sportformazione@libero.it" },
 
+  // Textbooks Emanuele studied — locale-independent titles. Fill from his list.
+  studyBooks: [],
+
   it: {
     seo: {
       title: "Emanuele d'Ambrosio — forza, coaching, formazione",
@@ -32,7 +35,7 @@ window.SITE_CONTENT = {
       p2: "Chinesiologo e massofisioterapista, gestisco lo Sporting Club Antares a Gela, dove seguo atleti e persone come personal trainer e preparatore atletico per ogni disciplina — dagli sport da combattimento al calcio.",
       h1: "Laurea in Scienze Motorie (Urbino)",
       h2: "Chinesiologo · Massofisioterapista",
-      h3: "Inventore del dispositivo PerfecTraining",
+      h3: "Inventore del dispositivo PerfecTraining, evoluto in",
       h4: "Docente formatore CONI · FPI",
     },
     services: {
@@ -46,6 +49,12 @@ window.SITE_CONTENT = {
       s3d: "Sviluppo della forza e preparazione specifica per pugilato e sport da combattimento.",
       s4t: "Formazione & docenza",
       s4d: "Corsi e seminari per tecnici e personal trainer (CONI, FPI).",
+    },
+    books: {
+      kicker: "Studi",
+      title: "Libri di testo studiati",
+      intro: "Alcuni dei testi su cui mi sono formato.",
+      empty: "Elenco in arrivo.",
     },
     book: {
       kicker: "Il libro",
@@ -95,7 +104,7 @@ window.SITE_CONTENT = {
       p2: "Kinesiologist and physical therapist, I run the Antares Sporting Club in Gela, where I coach athletes and people as a personal trainer and athletic coach across every discipline — from combat sports to football.",
       h1: "Sport Science degree (Urbino)",
       h2: "Kinesiologist · Physical therapist",
-      h3: "Inventor of the PerfecTraining device",
+      h3: "Inventor of the PerfecTraining device, evolved into",
       h4: "CONI · FPI educator / trainer",
     },
     services: {
@@ -109,6 +118,12 @@ window.SITE_CONTENT = {
       s3d: "Strength development and specific preparation for boxing and combat sports.",
       s4t: "Education & teaching",
       s4d: "Courses and seminars for coaches and personal trainers (CONI, FPI).",
+    },
+    books: {
+      kicker: "Studies",
+      title: "Textbooks I studied",
+      intro: "Some of the texts I trained on.",
+      empty: "List coming soon.",
     },
     book: {
       kicker: "The book",
