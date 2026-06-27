@@ -72,6 +72,18 @@
       li.appendChild(l);
       return li;
     });
+    fillList("cpd-list", dict.cpd && dict.cpd.items, function (it) {
+      var li = document.createElement("li");
+      var y = document.createElement("span");
+      y.className = "edu-year";
+      y.textContent = it.year;
+      var l = document.createElement("span");
+      l.className = "edu-label";
+      l.textContent = it.label;
+      li.appendChild(y);
+      li.appendChild(l);
+      return li;
+    });
     fillList("teaching-list", dict.teaching && dict.teaching.items, function (t) {
       var li = document.createElement("li");
       li.textContent = t;
