@@ -38,6 +38,20 @@ window.SITE_CONTENT = {
       h3: "Inventore del dispositivo PerfecTraining, evoluto in",
       h4: "Docente formatore CONI · FPI",
     },
+    credentials: {
+      kicker: "Formazione",
+      title: "Formazione & qualifiche",
+      items: [
+        { year: "2009", label: "Laurea in Scienze delle Attività Motorie e Sportive — Università di Urbino «Carlo Bo»" },
+        { year: "2012", label: "Perfezionamento universitario «Riatletizzazione motoria nella riabilitazione sportiva» — Chieti-Pescara" },
+        { year: "2018", label: "Diploma triennale di massofisioterapista (L. 403/71)" },
+        { year: "—", label: "Chinesiologo professionista (L. 4/2013, UNC n°10972)" },
+        { year: "2006", label: "Abilitazione CONI a consulente di educazione motoria per la scuola primaria" },
+        { year: "2005", label: "Insegnante tecnico-allenatore FIPCF / FIPE (pesistica)" },
+        { year: "2011", label: "Docente Formatore Regionale FPI (Federazione Pugilistica Italiana)" },
+        { year: "2016", label: "Brevetto del dispositivo PerfecTraining (poi Bodygon)" },
+      ],
+    },
     services: {
       kicker: "Cosa faccio",
       title: "Come posso aiutarti",
@@ -106,6 +120,20 @@ window.SITE_CONTENT = {
       h2: "Kinesiologist · Physical therapist",
       h3: "Inventor of the PerfecTraining device, evolved into",
       h4: "CONI · FPI educator / trainer",
+    },
+    credentials: {
+      kicker: "Education",
+      title: "Education & qualifications",
+      items: [
+        { year: "2009", label: "Degree in Sport and Movement Sciences — University of Urbino «Carlo Bo»" },
+        { year: "2012", label: "University specialization in motor re-athletization for sports rehabilitation — Chieti-Pescara" },
+        { year: "2018", label: "Three-year physical therapist diploma (It. Law 403/71)" },
+        { year: "—", label: "Professional kinesiologist (It. Law 4/2013, UNC n°10972)" },
+        { year: "2006", label: "CONI certification as movement-education consultant for primary school" },
+        { year: "2005", label: "Technical coach certification — FIPCF / FIPE (weightlifting)" },
+        { year: "2011", label: "Regional Trainer-Educator, FPI (Italian Boxing Federation)" },
+        { year: "2016", label: "Patent for the PerfecTraining device (later Bodygon)" },
+      ],
     },
     services: {
       kicker: "What I do",

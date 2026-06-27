@@ -153,6 +153,16 @@ a { color: inherit; }
 .hl-link { color: var(--accent); text-decoration: none; font-weight: 700; white-space: nowrap; }
 .hl-link:hover { text-decoration: underline; }
 
+/* Education & qualifications timeline */
+.edu-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.2rem; }
+.edu-list li { display: grid; grid-template-columns: 60px 1fr; gap: 1rem; align-items: baseline; padding: 0.85rem 0; border-bottom: 1px solid var(--line); }
+.edu-list li:last-child { border-bottom: none; }
+.edu-year { color: var(--accent); font-weight: 800; font-size: 0.95rem; }
+.edu-label { color: #e9e9ec; }
+@media (max-width: 520px) {
+  .edu-list li { grid-template-columns: 1fr; gap: 0.15rem; }
+}
+
 /* Textbooks studied */
 .books-intro { color: #e9e9ec; margin: 0 0 1.3rem; }
 .book-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.7rem; }

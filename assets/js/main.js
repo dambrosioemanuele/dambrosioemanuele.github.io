@@ -58,7 +58,8 @@
       btn.classList.toggle("is-active", btn.getAttribute("data-lang") === lang);
     });
 
-    renderBooks(dict);
+    renderBooks();
+    renderCredentials(dict);
     localStorage.setItem("lang", lang);
   }
 
@@ -86,22 +87,41 @@
     });
   }
 
-  // Build the "textbooks studied" list (locale-independent titles).
-  function renderBooks(dict) {
+  // Build the "textbooks studied" list; hide the whole section until we have titles.
+  function renderBooks() {
     var ul = document.getElementById("books-list");
+    var section = document.getElementById("books");
     if (!ul) return;
-    ul.innerHTML = "";
     var items = C.studyBooks || [];
     if (!items.length) {
-      var empty = document.createElement("li");
-      empty.className = "book-empty";
-      empty.textContent = (dict.books && dict.books.empty) || "";
-      ul.appendChild(empty);
+      if (section) section.hidden = true;
       return;
     }
+    if (section) section.hidden = false;
+    ul.innerHTML = "";
     items.forEach(function (title) {
       var li = document.createElement("li");
       li.textContent = title;
+      ul.appendChild(li);
+    });
+  }
+
+  // Build the education & qualifications timeline (locale-specific).
+  function renderCredentials(dict) {
+    var ul = document.getElementById("education-list");
+    if (!ul) return;
+    ul.innerHTML = "";
+    var items = (dict.credentials && dict.credentials.items) || [];
+    items.forEach(function (it) {
+      var li = document.createElement("li");
+      var year = document.createElement("span");
+      year.className = "edu-year";
+      year.textContent = it.year;
+      var label = document.createElement("span");
+      label.className = "edu-label";
+      label.textContent = it.label;
+      li.appendChild(year);
+      li.appendChild(label);
       ul.appendChild(li);
     });
   }
