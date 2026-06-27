@@ -1,0 +1,177 @@
+/* Emanuele D'Ambrosio — minimal one-page scaffold.
+   Dark, bold, "strength" aesthetic. System fonts (no external calls). */
+
+:root {
+  --bg: #0d0d0f;
+  --bg-soft: #16161a;
+  --fg: #f4f4f5;
+  --muted: #9a9aa2;
+  --accent: #e4572e;
+  --accent-fg: #ffffff;
+  --maxw: 1080px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 50% -10%, rgba(228, 87, 46, 0.16), transparent 60%),
+    var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  line-height: 1.55;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Nav ---- */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem clamp(1rem, 4vw, 2.5rem);
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  font-size: 1.15rem;
+  color: var(--fg);
+  text-decoration: none;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  padding: 0.15rem 0.5rem;
+}
+
+.lang {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.lang button {
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  padding: 0.2rem 0.1rem;
+  transition: color 0.15s ease;
+}
+
+.lang button:hover {
+  color: var(--fg);
+}
+
+.lang button.is-active {
+  color: var(--accent);
+}
+
+.lang-sep {
+  color: #3a3a42;
+}
+
+/* ---- Hero ---- */
+main {
+  flex: 1;
+  display: flex;
+}
+
+.hero {
+  margin: auto;
+  max-width: var(--maxw);
+  padding: clamp(2rem, 8vh, 6rem) clamp(1rem, 5vw, 3rem);
+  text-align: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 1.2rem;
+}
+
+.hero-name {
+  font-size: clamp(2.6rem, 9vw, 5.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin: 0;
+}
+
+.hero-tagline {
+  font-size: clamp(1.05rem, 2.6vw, 1.4rem);
+  color: var(--fg);
+  margin: 1.1rem 0 0;
+}
+
+.hero-intro {
+  color: var(--muted);
+  max-width: 38ch;
+  margin: 1rem auto 0;
+}
+
+/* ---- Buttons ---- */
+.cta-row {
+  margin-top: 2rem;
+  display: flex;
+  gap: 0.9rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  transition: transform 0.12s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-fg);
+  border: 2px solid var(--accent);
+}
+
+.btn-primary:hover {
+  background: #c8431f;
+  border-color: #c8431f;
+}
+
+/* ---- Footer ---- */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  flex-wrap: wrap;
+  padding: 1.5rem clamp(1rem, 4vw, 2.5rem);
+  color: var(--muted);
+  font-size: 0.82rem;
+  border-top: 1px solid #1f1f25;
+}
