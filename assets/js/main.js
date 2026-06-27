@@ -60,6 +60,28 @@
 
     renderBooks();
     renderCredentials(dict);
+    fillList("experience-list", dict.experience && dict.experience.items, function (it) {
+      var li = document.createElement("li");
+      var p = document.createElement("span");
+      p.className = "edu-year";
+      p.textContent = it.period;
+      var l = document.createElement("span");
+      l.className = "edu-label";
+      l.textContent = it.label;
+      li.appendChild(p);
+      li.appendChild(l);
+      return li;
+    });
+    fillList("teaching-list", dict.teaching && dict.teaching.items, function (t) {
+      var li = document.createElement("li");
+      li.textContent = t;
+      return li;
+    });
+    fillList("sports-list", dict.sports && dict.sports.items, function (t) {
+      var li = document.createElement("li");
+      li.textContent = t;
+      return li;
+    });
     localStorage.setItem("lang", lang);
   }
 
@@ -103,6 +125,16 @@
       var li = document.createElement("li");
       li.textContent = title;
       ul.appendChild(li);
+    });
+  }
+
+  // Generic list filler: build() returns the <li> for each item.
+  function fillList(id, items, build) {
+    var ul = document.getElementById(id);
+    if (!ul) return;
+    ul.innerHTML = "";
+    (items || []).forEach(function (it) {
+      ul.appendChild(build(it));
     });
   }
 

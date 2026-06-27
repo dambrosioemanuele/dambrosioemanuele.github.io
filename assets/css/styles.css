@@ -163,6 +163,21 @@ a { color: inherit; }
   .edu-list li { grid-template-columns: 1fr; gap: 0.15rem; }
 }
 
+/* Experience timeline (wider period column) */
+.exp-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.2rem; }
+.exp-list li { display: grid; grid-template-columns: 130px 1fr; gap: 1rem; align-items: baseline; padding: 0.85rem 0; border-bottom: 1px solid var(--line); }
+.exp-list li:last-child { border-bottom: none; }
+@media (max-width: 560px) { .exp-list li { grid-template-columns: 1fr; gap: 0.15rem; } }
+
+/* Bullet list (teaching) */
+.bullet-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.7rem; max-width: 760px; }
+.bullet-list li { position: relative; padding-left: 1.4rem; color: #e9e9ec; }
+.bullet-list li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 8px; height: 8px; border-radius: 2px; background: var(--accent); }
+
+/* Chips (sports) */
+.chip-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.chip-list li { background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 0.5rem 1.1rem; font-weight: 600; font-size: 0.95rem; }
+
 /* Textbooks studied */
 .books-intro { color: #e9e9ec; margin: 0 0 1.3rem; }
 .book-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.7rem; }

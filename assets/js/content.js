@@ -70,6 +70,35 @@ window.SITE_CONTENT = {
       intro: "Alcuni dei testi su cui mi sono formato.",
       empty: "Elenco in arrivo.",
     },
+    experience: {
+      kicker: "Esperienza",
+      title: "Percorso professionale",
+      items: [
+        { period: "2019 – oggi", label: "Gestore dello Sporting Club Antares (Gela) — personal trainer, massofisioterapista, preparatore atletico" },
+        { period: "2019", label: "Preparatore atletico — Gela Calcio (prima categoria)" },
+        { period: "2018 – 2019", label: "Personal trainer e massofisioterapista — centro Olilab (Gela)" },
+        { period: "2017 – 2018", label: "Massofisioterapista — Fisioterapik Center (Gela)" },
+        { period: "2015 – 2017", label: "Personal trainer e istruttore di pugilato — Club Vitality / Antares (Gela)" },
+        { period: "2011 – 2014", label: "Libero professionista, chinesiologo — studio di chinesiologia (Francavilla Fontana)" },
+        { period: "2008 – 2011", label: "Istruttore fitness e pugilato, personal trainer (Francavilla Fontana, Lecce)" },
+      ],
+    },
+    teaching: {
+      kicker: "Docenza",
+      title: "Docenza & relatore",
+      items: [
+        "Docente Formatore Regionale FPI (Federazione Pugilistica Italiana), dal 2011",
+        "Docente formatore in corsi per la qualifica CONI di personal trainer e preparatore atletico",
+        "Relatore in seminari su forza, preparazione atletica e PerfecTraining in tutta Italia (Perugia, Catania, La Spezia, Bari…)",
+        "Co-relatore in corsi tecnici della Federazione Pugilistica Italiana",
+        "Seminari su metodologia dell'allenamento e analisi della prestazione",
+      ],
+    },
+    sports: {
+      kicker: "Sport",
+      title: "Sport praticati a livello agonistico",
+      items: ["Pugilato", "Atletica leggera — salto in alto, getto del peso, 4×100, mezzofondo", "Pallacanestro"],
+    },
     book: {
       kicker: "Il libro",
       title: "«Le Espressioni della Forza»",
@@ -152,6 +181,35 @@ window.SITE_CONTENT = {
       title: "Textbooks I studied",
       intro: "Some of the texts I trained on.",
       empty: "List coming soon.",
+    },
+    experience: {
+      kicker: "Experience",
+      title: "Professional path",
+      items: [
+        { period: "2019 – now", label: "Manager of the Antares Sporting Club (Gela) — personal trainer, physical therapist, athletic coach" },
+        { period: "2019", label: "Athletic coach — Gela Calcio (first division, amateur)" },
+        { period: "2018 – 2019", label: "Personal trainer and physical therapist — Olilab center (Gela)" },
+        { period: "2017 – 2018", label: "Physical therapist — Fisioterapik Center (Gela)" },
+        { period: "2015 – 2017", label: "Personal trainer and boxing instructor — Club Vitality / Antares (Gela)" },
+        { period: "2011 – 2014", label: "Self-employed kinesiologist — kinesiology practice (Francavilla Fontana)" },
+        { period: "2008 – 2011", label: "Fitness and boxing instructor, personal trainer (Francavilla Fontana, Lecce)" },
+      ],
+    },
+    teaching: {
+      kicker: "Teaching",
+      title: "Teaching & speaking",
+      items: [
+        "Regional Trainer-Educator, FPI (Italian Boxing Federation), since 2011",
+        "Educator in CONI certification courses for personal trainers and athletic coaches",
+        "Speaker at seminars on strength, athletic preparation and PerfecTraining across Italy (Perugia, Catania, La Spezia, Bari…)",
+        "Co-speaker in technical courses of the Italian Boxing Federation",
+        "Seminars on training methodology and performance analysis",
+      ],
+    },
+    sports: {
+      kicker: "Sports",
+      title: "Competitive sports",
+      items: ["Boxing", "Athletics — high jump, shot put, 4×100, middle-distance", "Basketball"],
     },
     book: {
       kicker: "The book",
