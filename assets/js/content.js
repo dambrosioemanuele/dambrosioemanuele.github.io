@@ -17,13 +17,13 @@ window.SITE_CONTENT = {
 
   it: {
     seo: {
-      title: "Emanuele D'Ambrosio",
+      title: "Emanuele d'Ambrosio",
       description:
-        "Sito ufficiale di Emanuele D'Ambrosio — autore di «Le Espressioni della Forza».",
+        "Sito ufficiale di Emanuele d'Ambrosio — autore di «Le Espressioni della Forza».",
     },
     hero: {
       eyebrow: "Forza · Coaching · Formazione",
-      name: "Emanuele D'Ambrosio",
+      name: "Emanuele d'Ambrosio",
       tagline: "Autore di «Le Espressioni della Forza».",
       intro:
         "Sito in costruzione. Presto: biografia, risultati, il libro, coaching e corsi.",
@@ -39,13 +39,13 @@ window.SITE_CONTENT = {
 
   en: {
     seo: {
-      title: "Emanuele D'Ambrosio",
+      title: "Emanuele d'Ambrosio",
       description:
-        "Official site of Emanuele D'Ambrosio — author of «Le Espressioni della Forza».",
+        "Official site of Emanuele d'Ambrosio — author of «Le Espressioni della Forza».",
     },
     hero: {
       eyebrow: "Strength · Coaching · Education",
-      name: "Emanuele D'Ambrosio",
+      name: "Emanuele d'Ambrosio",
       tagline: "Author of «Le Espressioni della Forza».",
       intro:
         "Site under construction. Coming soon: biography, results, the book, coaching and courses.",

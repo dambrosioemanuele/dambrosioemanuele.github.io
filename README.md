@@ -1,6 +1,6 @@
-# Emanuele D'Ambrosio — Official Website
+# Emanuele d'Ambrosio — Official Website
 
-Static one-page personal website for **Emanuele D'Ambrosio**, author of the
+Static one-page personal website for **Emanuele d'Ambrosio**, author of the
 strength-training book *«Le Espressioni della Forza»*.
 
 - **Type**: single-page static site (no build step — plain HTML/CSS/JS).
