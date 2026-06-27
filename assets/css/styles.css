@@ -11,6 +11,9 @@
   --accent-fg: #0d0d0f; /* dark text on the bright green (readable) */
   --accent-dim: #8fd400;
   --maxw: 1080px;
+  /* One shared horizontal gutter so every full-width block (nav, sections,
+     footer) lines its content up on the same left/right edge. */
+  --gutter: max(clamp(1rem, 5vw, 3rem), calc((100% - var(--maxw)) / 2));
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -38,7 +41,7 @@ a { color: inherit; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.9rem clamp(1rem, 4vw, 2.5rem);
+  padding: 0.9rem var(--gutter);
   background: rgba(13, 13, 15, 0.8);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
@@ -60,9 +63,7 @@ a { color: inherit; }
 
 /* ---- Hero ---- */
 .hero {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: clamp(3rem, 12vh, 7rem) clamp(1rem, 5vw, 3rem) clamp(2.5rem, 8vh, 5rem);
+  padding: clamp(3rem, 12vh, 7rem) var(--gutter) clamp(2.5rem, 8vh, 5rem);
   text-align: center;
   background:
     radial-gradient(1100px 520px at 50% -15%, rgba(168, 255, 0, 0.12), transparent 60%);
@@ -105,12 +106,9 @@ a { color: inherit; }
 
 /* ---- Sections ---- */
 .section {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: clamp(2.5rem, 8vh, 5rem) clamp(1rem, 5vw, 3rem);
+  padding: clamp(2.5rem, 8vh, 5rem) var(--gutter);
 }
-.section-alt { max-width: none; background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.section-alt > * { max-width: var(--maxw); margin-left: auto; margin-right: auto; }
+.section-alt { background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .kicker { text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.72rem; font-weight: 700; color: var(--accent); margin: 0 0 0.6rem; }
 .section-title { font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.1; margin: 0 0 1.5rem; font-weight: 800; letter-spacing: -0.01em; }
 
@@ -192,8 +190,7 @@ a { color: inherit; }
 /* Footer */
 .footer {
   display: flex; align-items: center; justify-content: space-between; gap: 0.5rem 1.5rem; flex-wrap: wrap;
-  max-width: var(--maxw); margin: 0 auto;
-  padding: 1.6rem clamp(1rem, 4vw, 2.5rem);
+  padding: 1.6rem var(--gutter);
   color: var(--muted); font-size: 0.82rem; border-top: 1px solid var(--line);
 }
 
