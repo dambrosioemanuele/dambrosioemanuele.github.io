@@ -4,20 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- TODO(launch): remove this noindex once the site has real content. -->
+    <!-- TODO(launch): remove this noindex once the content is final. -->
     <meta name="robots" content="noindex" />
 
     <title>Emanuele d'Ambrosio</title>
     <meta name="description" content="" data-i18n-meta="seo.description" />
 
-    <!-- Bilingual: declare both locales for search engines. -->
     <link rel="alternate" hreflang="it" href="./?lang=it" />
     <link rel="alternate" hreflang="en" href="./?lang=en" />
     <link rel="alternate" hreflang="x-default" href="./" />
 
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
 
-    <!-- Open Graph (basic) -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Emanuele d'Ambrosio" />
     <meta property="og:description" content="" data-i18n-meta="seo.description" />
@@ -26,7 +24,7 @@
   </head>
   <body>
     <header class="nav">
-      <a class="brand" href="./" aria-label="Emanuele d'Ambrosio">ED</a>
+      <a class="brand" href="#top" aria-label="Emanuele d'Ambrosio">ED</a>
       <nav class="lang" aria-label="Language switch">
         <button type="button" data-lang="it">IT</button>
         <span class="lang-sep" aria-hidden="true">/</span>
@@ -34,7 +32,8 @@
       </nav>
     </header>
 
-    <main>
+    <main id="top">
+      <!-- HERO -->
       <section class="hero">
         <p class="eyebrow" data-i18n="hero.eyebrow"></p>
         <h1 class="hero-name" data-i18n="hero.name"></h1>
@@ -42,7 +41,92 @@
         <p class="hero-intro" data-i18n="hero.intro"></p>
         <div class="cta-row">
           <a class="btn btn-primary" data-link="book" data-i18n="hero.ctaBook" href="#"></a>
+          <a class="btn btn-ghost" href="#contact" data-i18n="hero.ctaContact"></a>
         </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section" id="about">
+        <p class="kicker" data-i18n="about.kicker"></p>
+        <h2 class="section-title" data-i18n="about.title"></h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p data-i18n="about.p1"></p>
+            <p data-i18n="about.p2"></p>
+          </div>
+          <ul class="highlights">
+            <li data-i18n="about.h1"></li>
+            <li data-i18n="about.h2"></li>
+            <li data-i18n="about.h3"></li>
+            <li data-i18n="about.h4"></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="section section-alt" id="services">
+        <p class="kicker" data-i18n="services.kicker"></p>
+        <h2 class="section-title" data-i18n="services.title"></h2>
+        <div class="cards">
+          <article class="card"><h3 data-i18n="services.s1t"></h3><p data-i18n="services.s1d"></p></article>
+          <article class="card"><h3 data-i18n="services.s2t"></h3><p data-i18n="services.s2d"></p></article>
+          <article class="card"><h3 data-i18n="services.s3t"></h3><p data-i18n="services.s3d"></p></article>
+          <article class="card"><h3 data-i18n="services.s4t"></h3><p data-i18n="services.s4d"></p></article>
+        </div>
+      </section>
+
+      <!-- BOOK -->
+      <section class="section book-band" id="book">
+        <p class="kicker" data-i18n="book.kicker"></p>
+        <h2 class="section-title" data-i18n="book.title"></h2>
+        <p class="book-text" data-i18n="book.text"></p>
+        <a class="btn btn-primary" data-link="book" data-i18n="book.cta" href="#"></a>
+      </section>
+
+      <!-- NEWS -->
+      <section class="section" id="news">
+        <p class="kicker" data-i18n="news.kicker"></p>
+        <h2 class="section-title" data-i18n="news.title"></h2>
+        <article class="news-item">
+          <h3 class="news-title" data-i18n="news.itemTitle"></h3>
+          <p data-i18n="news.itemText"></p>
+
+          <figure class="media">
+            <img
+              src="./assets/img/parisi-aos-course.jpg"
+              alt="Anatomy of Speed — Parisi certification course"
+              loading="lazy"
+              decoding="async"
+              width="1280"
+              height="888"
+            />
+            <figcaption data-i18n="news.captionPhoto"></figcaption>
+          </figure>
+
+          <figure class="media">
+            <!-- Lazy: the source is only attached (and the file downloaded) when
+                 the video scrolls near the viewport. See main.js. -->
+            <video
+              class="lazy-video"
+              controls
+              preload="none"
+              playsinline
+              poster="./assets/img/parisi-aos-course.jpg"
+            >
+              <source data-src="./assets/media/parisi-aos-clip.mp4" type="video/mp4" />
+            </video>
+            <figcaption data-i18n="news.captionVideo"></figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section section-alt" id="contact">
+        <p class="kicker" data-i18n="contact.kicker"></p>
+        <h2 class="section-title" data-i18n="contact.title"></h2>
+        <p class="contact-text" data-i18n="contact.text"></p>
+        <p class="contact-where" data-i18n="contact.location"></p>
+        <a class="btn btn-primary" id="contact-email" href="#" data-i18n="contact.emailLabel"></a>
       </section>
     </main>
 

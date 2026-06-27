@@ -1,11 +1,11 @@
 /*
- * Tiny i18n renderer. No framework, no build.
+ * Tiny i18n renderer + viewport-based lazy loading. No framework, no build.
  *
- * - Reads window.SITE_CONTENT (assets/js/content.js).
- * - Fills every [data-i18n] element's text and [data-i18n-meta] tag's content
- *   from the active locale, resolving dotted key paths (e.g. "hero.tagline").
- * - Wires [data-link] anchors to SITE_CONTENT.links.
- * - Language choice persists in localStorage and reflects ?lang= in the URL.
+ * i18n: fills [data-i18n] text, [data-i18n-meta] content, [data-link] hrefs from
+ *       the active locale (dotted key paths). Language persists in localStorage
+ *       and honors ?lang=.
+ * Lazy: images use native loading="lazy"; the (heavy) video's source is attached
+ *       only when it scrolls near the viewport (IntersectionObserver).
  */
 (function () {
   "use strict";
@@ -38,26 +38,22 @@
 
     document.documentElement.lang = lang;
 
-    // Text nodes
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       var val = resolve(dict, el.getAttribute("data-i18n"));
       if (val != null) el.textContent = val;
     });
 
-    // Meta tags (title + description-like tags)
     document.querySelectorAll("[data-i18n-meta]").forEach(function (el) {
       var val = resolve(dict, el.getAttribute("data-i18n-meta"));
       if (val != null) el.setAttribute("content", val);
     });
     if (dict.seo && dict.seo.title) document.title = dict.seo.title;
 
-    // Shared links
     document.querySelectorAll("[data-link]").forEach(function (el) {
       var href = C.links && C.links[el.getAttribute("data-link")];
       if (href) el.setAttribute("href", href);
     });
 
-    // Active state on the language buttons
     document.querySelectorAll(".lang [data-lang]").forEach(function (btn) {
       btn.classList.toggle("is-active", btn.getAttribute("data-lang") === lang);
     });
@@ -65,9 +61,50 @@
     localStorage.setItem("lang", lang);
   }
 
+  // Attach the video source only when it nears the viewport.
+  function setupLazyVideo() {
+    var videos = document.querySelectorAll("video.lazy-video");
+    if (!videos.length) return;
+
+    function load(video) {
+      video.querySelectorAll("source[data-src]").forEach(function (s) {
+        s.src = s.getAttribute("data-src");
+        s.removeAttribute("data-src");
+      });
+      video.load();
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      // Old browsers: just load them.
+      videos.forEach(load);
+      return;
+    }
+
+    var io = new IntersectionObserver(
+      function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            load(entry.target);
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "300px 0px" } // start a bit before it's actually visible
+    );
+    videos.forEach(function (v) {
+      io.observe(v);
+    });
+  }
+
   function init() {
     var yearEl = document.getElementById("year");
     if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+    // Contact email (locale-independent).
+    var emailEl = document.getElementById("contact-email");
+    if (emailEl && C.links && C.links.email) {
+      emailEl.setAttribute("href", "mailto:" + C.links.email);
+    }
 
     document.querySelectorAll(".lang [data-lang]").forEach(function (btn) {
       btn.addEventListener("click", function () {
@@ -76,6 +113,7 @@
     });
 
     apply(pickLang());
+    setupLazyVideo();
   }
 
   if (document.readyState === "loading") {
