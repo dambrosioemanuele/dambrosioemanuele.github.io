@@ -7,7 +7,7 @@ window.SITE_CONTENT = {
   meta: { defaultLang: "it", languages: ["it", "en"], domain: "emanueledambrosio.com" },
 
   // Locale-independent.
-  links: { book: "https://bodygon.com/products/book", email: "sportformazione@libero.it" },
+  links: { book: "https://calzetti-mariucci.it/prodotto/le-espressioni-della-forza", email: "sportformazione@libero.it" },
 
   // Textbooks Emanuele studied — locale-independent titles. Fill from his list.
   studyBooks: [],
@@ -118,7 +118,8 @@ window.SITE_CONTENT = {
     book: {
       kicker: "Il libro",
       title: "«Le Espressioni della Forza»",
-      text: "Il mio libro, edito da Bodygon: un percorso sulla forza e sulle sue espressioni, dalla teoria all'applicazione pratica.",
+      text: "Il mio libro, edito da Calzetti & Mariucci: un percorso sulla forza e sulle sue espressioni, dalla teoria all'applicazione pratica.",
+      publisher: "Edito da",
       cta: "Scopri il libro",
     },
     news: {
@@ -246,7 +247,8 @@ window.SITE_CONTENT = {
     book: {
       kicker: "The book",
       title: "«Le Espressioni della Forza»",
-      text: "My book, published by Bodygon: a journey through strength and its expressions, from theory to practical application.",
+      text: "My book, published by Calzetti & Mariucci: a journey through strength and its expressions, from theory to practical application.",
+      publisher: "Published by",
       cta: "Discover the book",
     },
     news: {
