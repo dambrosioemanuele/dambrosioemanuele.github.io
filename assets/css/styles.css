@@ -6,8 +6,8 @@
   --bg-soft: #16161a;
   --fg: #f4f4f5;
   --muted: #9a9aa2;
-  --accent: #e4572e;
-  --accent-fg: #ffffff;
+  --accent: #a8ff00; /* Bodygon brand green */
+  --accent-fg: #0d0d0f; /* dark text on the bright green (readable) */
   --maxw: 1080px;
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif;
@@ -25,7 +25,7 @@ body {
 
 body {
   background:
-    radial-gradient(1200px 600px at 50% -10%, rgba(228, 87, 46, 0.16), transparent 60%),
+    radial-gradient(1200px 600px at 50% -10%, rgba(168, 255, 0, 0.12), transparent 60%),
     var(--bg);
   color: var(--fg);
   font-family: var(--font);
@@ -159,8 +159,8 @@ main {
 }
 
 .btn-primary:hover {
-  background: #c8431f;
-  border-color: #c8431f;
+  background: #8fd400;
+  border-color: #8fd400;
 }
 
 /* ---- Footer ---- */
