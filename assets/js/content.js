@@ -130,6 +130,7 @@ window.SITE_CONTENT = {
         "In questi giorni partecipo al primo corso tenuto in Italia da Bill Parisi per la certificazione «Anatomy of Speed».",
       captionPhoto: "Bill Parisi — AoS 2, Live Certification Course.",
       captionVideo: "Un momento dal corso.",
+      captionDedication: "La dedica di Bill Parisi sulla sua «Anatomia della Velocità» (Calzetti & Mariucci).",
     },
     contact: {
       kicker: "Contatti",
@@ -259,6 +260,7 @@ window.SITE_CONTENT = {
         "These days I'm attending the first course held in Italy by Bill Parisi for the «Anatomy of Speed» certification.",
       captionPhoto: "Bill Parisi — AoS 2, Live Certification Course.",
       captionVideo: "A moment from the course.",
+      captionDedication: "Bill Parisi's dedication in his «Anatomy of Speed» (Calzetti & Mariucci).",
     },
     contact: {
       kicker: "Contact",
