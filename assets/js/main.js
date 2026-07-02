@@ -43,6 +43,13 @@
       if (val != null) el.textContent = val;
     });
 
+    // Rich text (author-controlled content only — safe to inject as HTML).
+    // Lets the narrative carry inline emphasis and links.
+    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+      var val = resolve(dict, el.getAttribute("data-i18n-html"));
+      if (val != null) el.innerHTML = val;
+    });
+
     document.querySelectorAll("[data-i18n-meta]").forEach(function (el) {
       var val = resolve(dict, el.getAttribute("data-i18n-meta"));
       if (val != null) el.setAttribute("content", val);
