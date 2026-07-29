@@ -185,6 +185,64 @@ a { color: inherit; }
 /* Feature the (portrait) thesis cover without letting it dominate. */
 .story-figure-thesis { max-width: 320px; }
 .story-figure-thesis img { box-shadow: 0 18px 44px rgba(0, 0, 0, 0.55); }
+/* Old, low-resolution photos: keep them small so they stay sharp. */
+.story-figure-small { max-width: 420px; }
+
+/* Athletes & teams — results in the field. Text and photo side by side,
+   alternating sides so the long page keeps a rhythm. */
+.wins-band { background-image: radial-gradient(900px 400px at 85% -10%, rgba(168, 255, 0, 0.06), transparent 60%); }
+.wins-lead {
+  font-size: clamp(1.12rem, 1.02rem + 0.5vw, 1.4rem);
+  line-height: 1.5;
+  color: #fff;
+  font-weight: 500;
+  max-width: 62ch;
+  margin: 0 0 clamp(2rem, 5vw, 3.2rem);
+}
+.win { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(1.4rem, 4vw, 3rem); align-items: start; }
+.win + .win {
+  margin-top: clamp(2.4rem, 6vw, 4rem);
+  padding-top: clamp(2.4rem, 6vw, 4rem);
+  border-top: 1px solid var(--line);
+}
+.win-year { color: var(--accent); font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.74rem; margin: 0 0 0.5rem; }
+.win-title { font-size: clamp(1.2rem, 1.05rem + 0.7vw, 1.55rem); font-weight: 800; letter-spacing: -0.01em; line-height: 1.2; color: #fff; margin: 0 0 0.9rem; }
+.win-body p { color: #e9e9ec; margin: 0 0 1.1rem; max-width: 60ch; }
+.win-body strong { color: #fff; font-weight: 700; }
+.win-quote {
+  margin: 1.6rem 0 0;
+  padding: 0.15rem 0 0.15rem 1.2rem;
+  border-left: 3px solid var(--accent);
+  font-size: clamp(1.04rem, 0.98rem + 0.4vw, 1.24rem);
+  line-height: 1.45;
+  font-weight: 700;
+  color: #fff;
+  max-width: 52ch;
+}
+/* Text left, main photo right. A second photo drops under the text so the
+   column doesn't sit empty next to a tall portrait shot. */
+.win-body { grid-column: 1; grid-row: 1; }
+.win-fig { grid-column: 2; grid-row: 1 / span 2; margin: 0; }
+.win-fig + .win-fig { grid-column: 1; grid-row: 2; }
+.win-fig img { width: 100%; border-radius: 14px; border: 1px solid var(--line); background: #000; }
+.win-fig figcaption { color: var(--muted); font-size: 0.88rem; margin-top: 0.5rem; line-height: 1.5; }
+/* Very tall phone shots: frame them instead of letting them run down the page. */
+.win-tall img { aspect-ratio: 3 / 4; object-fit: cover; object-position: center 25%; }
+/* The trophy plate matters for its inscription — crop to it. */
+.win-detail img { aspect-ratio: 16 / 10; object-fit: cover; object-position: center 58%; }
+/* Alternate sides so the sequence doesn't read as one long column. */
+.wins > .win:nth-child(even) .win-body { grid-column: 2; }
+.wins > .win:nth-child(even) .win-fig { grid-column: 1; }
+.wins > .win:nth-child(even) .win-fig + .win-fig { grid-column: 2; }
+@media (max-width: 860px) {
+  /* Stacked: text always leads, photos follow, in source order. */
+  .win { grid-template-columns: 1fr; }
+  .win-body, .win-fig, .win-fig + .win-fig,
+  .wins > .win:nth-child(even) .win-body,
+  .wins > .win:nth-child(even) .win-fig,
+  .wins > .win:nth-child(even) .win-fig + .win-fig { grid-column: 1; grid-row: auto; }
+  .win-fig { max-width: 520px; }
+}
 
 /* Services */
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }

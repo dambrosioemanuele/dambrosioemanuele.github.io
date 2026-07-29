@@ -71,6 +71,16 @@
         <div class="story">
           <p class="story-lead" data-i18n-html="story.lead"></p>
 
+          <h3 class="story-h" data-i18n="story.hUni"></h3>
+          <p data-i18n-html="story.p0"></p>
+
+          <figure class="story-figure story-figure-small">
+            <img src="./assets/img/myers-urbino.jpg" alt="Emanuele d'Ambrosio con Carlton Myers all'Università di Urbino" loading="lazy" decoding="async" width="472" height="372" />
+            <figcaption data-i18n="story.capMyers"></figcaption>
+          </figure>
+
+          <h3 class="story-h" data-i18n="story.hThesis"></h3>
+
           <figure class="story-figure story-figure-thesis">
             <img src="./assets/img/thesis-cover.jpg" alt="Copertina della tesi di laurea «La forza e le sue espressioni nel pugilato dilettantistico»" loading="lazy" decoding="async" width="771" height="1100" />
             <figcaption data-i18n="story.capThesis"></figcaption>
@@ -92,6 +102,11 @@
           <p data-i18n-html="story.p3"></p>
 
           <figure class="story-figure">
+            <img src="./assets/img/gallipoli-2012-talk.jpg" alt="Emanuele d'Ambrosio relatore al raduno FPI di Gallipoli, 2012" loading="lazy" decoding="async" width="1080" height="810" />
+            <figcaption data-i18n="story.capGallipoliTalk"></figcaption>
+          </figure>
+
+          <figure class="story-figure">
             <button type="button" class="video-facade" data-video="./assets/media/gallipoli-2012-clip.mp4" aria-label="Play video">
               <img src="./assets/img/gallipoli-2012-poster.jpg" alt="Intervista a Emanuele d'Ambrosio dopo il seminario, Gallipoli 2012" loading="lazy" decoding="async" width="620" height="300" />
               <span class="play-icon" aria-hidden="true">▶</span>
@@ -107,22 +122,73 @@
         </div>
       </section>
 
+      <!-- ATHLETES & TEAMS (results in the field) -->
+      <section class="section wins-band" id="athletes">
+        <p class="kicker" data-i18n="wins.kicker"></p>
+        <h2 class="section-title" data-i18n="wins.title"></h2>
+        <p class="wins-lead" data-i18n-html="wins.lead"></p>
+
+        <div class="wins">
+          <article class="win">
+            <div class="win-body">
+              <p class="win-year" data-i18n="wins.w1y"></p>
+              <h3 class="win-title" data-i18n="wins.w1t"></h3>
+              <p data-i18n-html="wins.w1p"></p>
+            </div>
+            <figure class="win-fig win-tall">
+              <img src="./assets/img/gela-trophy-court.jpg" alt="Emanuele d'Ambrosio e Carmelo Nuzzi con la coppa del campionato di Serie C" loading="lazy" decoding="async" width="543" height="1100" />
+              <figcaption data-i18n="wins.w1cap"></figcaption>
+            </figure>
+            <figure class="win-fig win-detail">
+              <img src="./assets/img/gela-trophy-plate.jpg" alt="Targa della coppa: Campionato Serie C, prima classificata, 2025/2026" loading="lazy" decoding="async" width="438" height="780" />
+              <figcaption data-i18n="wins.w1cap2"></figcaption>
+            </figure>
+          </article>
+
+          <article class="win">
+            <div class="win-body">
+              <p class="win-year" data-i18n="wins.w2y"></p>
+              <h3 class="win-title" data-i18n="wins.w2t"></h3>
+              <p data-i18n-html="wins.w2p"></p>
+            </div>
+            <figure class="win-fig">
+              <img src="./assets/img/pappalardo-belts.jpg" alt="Emanuele d'Ambrosio con Gianluca Pappalardo e le cinture del Trofeo delle Cinture Pro" loading="lazy" decoding="async" width="737" height="1000" />
+              <figcaption data-i18n="wins.w2cap"></figcaption>
+            </figure>
+          </article>
+
+          <article class="win">
+            <div class="win-body">
+              <p class="win-year" data-i18n="wins.w3y"></p>
+              <h3 class="win-title" data-i18n="wins.w3t"></h3>
+              <p data-i18n-html="wins.w3p1"></p>
+              <p data-i18n-html="wins.w3p2"></p>
+              <blockquote class="win-quote" data-i18n-html="wins.w3q"></blockquote>
+            </div>
+            <figure class="win-fig">
+              <img src="./assets/img/francavilla-athletes.jpg" alt="Emanuele d'Ambrosio con Giacomo Leone, Ottavio Andriani e Stefano Baldini" loading="lazy" decoding="async" width="1200" height="900" />
+              <figcaption data-i18n="wins.w3cap"></figcaption>
+            </figure>
+          </article>
+        </div>
+      </section>
+
       <!-- EDUCATION -->
-      <section class="section" id="education">
+      <section class="section section-alt" id="education">
         <p class="kicker" data-i18n="credentials.kicker"></p>
         <h2 class="section-title" data-i18n="credentials.title"></h2>
         <ul class="edu-list" id="education-list"></ul>
       </section>
 
       <!-- EXPERIENCE -->
-      <section class="section section-alt" id="experience">
+      <section class="section" id="experience">
         <p class="kicker" data-i18n="experience.kicker"></p>
         <h2 class="section-title" data-i18n="experience.title"></h2>
         <ul class="exp-list" id="experience-list"></ul>
       </section>
 
       <!-- SERVICES -->
-      <section class="section" id="services">
+      <section class="section section-alt" id="services">
         <p class="kicker" data-i18n="services.kicker"></p>
         <h2 class="section-title" data-i18n="services.title"></h2>
         <div class="cards">
@@ -134,21 +200,21 @@
       </section>
 
       <!-- TEACHING -->
-      <section class="section section-alt" id="teaching">
+      <section class="section" id="teaching">
         <p class="kicker" data-i18n="teaching.kicker"></p>
         <h2 class="section-title" data-i18n="teaching.title"></h2>
         <ul class="bullet-list" id="teaching-list"></ul>
       </section>
 
       <!-- CONTINUING EDUCATION -->
-      <section class="section" id="cpd">
+      <section class="section section-alt" id="cpd">
         <p class="kicker" data-i18n="cpd.kicker"></p>
         <h2 class="section-title" data-i18n="cpd.title"></h2>
         <ul class="edu-list" id="cpd-list"></ul>
       </section>
 
       <!-- SPORTS -->
-      <section class="section section-alt" id="sports">
+      <section class="section" id="sports">
         <p class="kicker" data-i18n="sports.kicker"></p>
         <h2 class="section-title" data-i18n="sports.title"></h2>
         <ul class="chip-list" id="sports-list"></ul>
@@ -177,7 +243,7 @@
       </section>
 
       <!-- NEWS -->
-      <section class="section" id="news">
+      <section class="section section-alt" id="news">
         <p class="kicker" data-i18n="news.kicker"></p>
         <h2 class="section-title" data-i18n="news.title"></h2>
         <article class="news-item">
@@ -209,7 +275,7 @@
       </section>
 
       <!-- CONTACT -->
-      <section class="section section-alt" id="contact">
+      <section class="section" id="contact">
         <p class="kicker" data-i18n="contact.kicker"></p>
         <h2 class="section-title" data-i18n="contact.title"></h2>
         <p class="contact-text" data-i18n="contact.text"></p>
