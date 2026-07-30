@@ -64,9 +64,9 @@ window.SITE_CONTENT = {
         "Nel 2011 il mio contributo sulla metodologia dell'allenamento viene pubblicato sul sito ufficiale della <strong>Federazione Pugilistica Italiana</strong> come apporto innovativo. Dopo averne verificato di persona il valore didattico e scientifico, <strong>Massimo Sciotti</strong> — allora responsabile della formazione dei tecnici nazionali — dispone l'inserimento del mio nome nell'elenco dei formatori regionali FPI, per i comitati di Puglia e Basilicata, nella materia metodologia dell'allenamento.",
       h3: "Sul palco, tra i relatori",
       p3:
-        "Nel 2012, durante un raduno collegiale della FPI a Gallipoli, vengo chiamato come relatore insieme a <strong>Emanuele Renzini</strong>, all'epoca allenatore della nazionale femminile di pugilato, per un seminario dedicato all'allenamento della forza nel pugilato femminile.",
-      capGallipoliTalk: "Il mio intervento come formatore FPI al raduno di Gallipoli, 2012.",
-      capGallipoli: "Intervista dopo il seminario. Gallipoli, 2012.",
+        "Nel 2013, durante un raduno collegiale della FPI a Gallipoli, vengo chiamato come relatore insieme a <strong>Emanuele Renzini</strong>, all'epoca allenatore della nazionale femminile di pugilato, per un seminario dedicato all'allenamento della forza nel pugilato femminile.",
+      capGallipoliTalk: "Il mio intervento come formatore FPI al raduno di Gallipoli, 2013.",
+      capGallipoli: "Intervista dopo il seminario. Gallipoli, 2013.",
       h4: "Dalla prestazione alla riabilitazione",
       p4:
         "La forza non vive senza la salute del movimento. Nel 2012 conseguo all'Università «G. D'Annunzio» di Chieti-Pescara il perfezionamento universitario in <em>riatletizzazione motoria nella riabilitazione sportiva</em>, sotto la direzione del prof. Raul Saggini, alla Facoltà di Medicina e Chirurgia. Tra il 2014 e il 2018 completo questo percorso qualificandomi come massoterapista, idroterapista e infine massofisioterapista presso l'agenzia formativa Athena, in Molise.",
@@ -154,7 +154,7 @@ window.SITE_CONTENT = {
       title: "Docenza & relatore",
       items: [
         "Docente Formatore Regionale FPI (Federazione Pugilistica Italiana), dal 2011",
-        "Relatore, con Emanuele Renzini (all. nazionale femminile), al seminario FPI sull'allenamento della forza nel pugilato femminile (Gallipoli, 2012)",
+        "Relatore, con Emanuele Renzini (all. nazionale femminile), al seminario FPI sull'allenamento della forza nel pugilato femminile (Gallipoli, 2013)",
         "Docente di metodologia dell'allenamento — corso per aspiranti tecnici FPI (Bari, 2014)",
         "Docente formatore in corsi per la qualifica CONI di personal trainer (Gela, La Spezia, 2016)",
         "Docente formatore nel corso per preparatore atletico negli sport da combattimento (La Spezia, 2016)",
@@ -257,9 +257,9 @@ window.SITE_CONTENT = {
         "In 2011 my contribution on training methodology was published on the official website of the <strong>Italian Boxing Federation</strong> (FPI) as an innovative one. After personally verifying its educational and scientific value, <strong>Massimo Sciotti</strong> — then head of national coach education — added my name to the roster of FPI regional trainers, for the Puglia and Basilicata committees, in the field of training methodology.",
       h3: "On stage, among the speakers",
       p3:
-        "In 2012, during an FPI training camp in Gallipoli, I was invited to speak alongside <strong>Emanuele Renzini</strong>, at the time coach of the women's national boxing team, for a seminar on strength training in women's boxing.",
-      capGallipoliTalk: "Speaking as an FPI educator at the Gallipoli training camp, 2012.",
-      capGallipoli: "Interviewed after the seminar. Gallipoli, 2012.",
+        "In 2013, during an FPI training camp in Gallipoli, I was invited to speak alongside <strong>Emanuele Renzini</strong>, at the time coach of the women's national boxing team, for a seminar on strength training in women's boxing.",
+      capGallipoliTalk: "Speaking as an FPI educator at the Gallipoli training camp, 2013.",
+      capGallipoli: "Interviewed after the seminar. Gallipoli, 2013.",
       h4: "From performance to rehabilitation",
       p4:
         "Strength cannot live without healthy movement. In 2012 I earned a university specialization in <em>motor re-athletization for sports rehabilitation</em> at the «G. D'Annunzio» University of Chieti-Pescara, under Prof. Raul Saggini, at the Faculty of Medicine and Surgery. Between 2014 and 2018 I completed this path, qualifying as a massage therapist, hydrotherapist and finally physical therapist at the Athena training agency, in Molise.",
@@ -347,7 +347,7 @@ window.SITE_CONTENT = {
       title: "Teaching & speaking",
       items: [
         "Regional Trainer-Educator, FPI (Italian Boxing Federation), since 2011",
-        "Speaker, with Emanuele Renzini (women's national team coach), at the FPI seminar on strength training in women's boxing (Gallipoli, 2012)",
+        "Speaker, with Emanuele Renzini (women's national team coach), at the FPI seminar on strength training in women's boxing (Gallipoli, 2013)",
         "Lecturer in training methodology — course for aspiring FPI coaches (Bari, 2014)",
         "Educator in CONI certification courses for personal trainers (Gela, La Spezia, 2016)",
         "Educator in the course for combat-sports athletic coaches (La Spezia, 2016)",
