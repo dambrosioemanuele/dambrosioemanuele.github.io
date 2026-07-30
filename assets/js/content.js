@@ -153,6 +153,8 @@ window.SITE_CONTENT = {
       kicker: "Docenza",
       title: "Docenza & relatore",
       items: [
+        "Lezione alle classi quinte del Liceo Scientifico Sportivo «Eschilo» di Gela, nell'ambito delle attività di formazione e orientamento dell'istituto (2026)",
+        "Relatore alla presentazione nazionale de «Le espressioni della forza» dentro un corso FIPE per tecnici di sollevamento pesi olimpico (CrossFit Corsico, Milano, 2025)",
         "Docente Formatore Regionale FPI (Federazione Pugilistica Italiana), dal 2011",
         "Relatore, con Emanuele Renzini (all. nazionale femminile), al seminario FPI sull'allenamento della forza nel pugilato femminile (Gallipoli, 2013)",
         "Docente di metodologia dell'allenamento — corso per aspiranti tecnici FPI (Bari, 2014)",
@@ -183,8 +185,10 @@ window.SITE_CONTENT = {
     },
     book: {
       kicker: "Il libro",
-      title: "«Le Espressioni della Forza»",
-      text: "Il mio libro, edito da Calzetti & Mariucci: un percorso sulla forza e sulle sue espressioni, dalla teoria all'applicazione pratica.",
+      title: "«Le espressioni della forza»",
+      subtitle: "La metodologia di Bosco per il condizionamento neuromuscolare attraverso il Bodygon",
+      text: "Il mio libro raccoglie e rende operativa l'eredità scientifica di Carmelo Bosco nel condizionamento neuromuscolare: dalla teoria alla misura in palestra, fino al Bodygon. La prefazione è di Sebastiano Corbu, allenatore della Nazionale italiana di pesistica olimpica.",
+      meta: "Calzetti & Mariucci Editori, 2025 · ISBN 9788860287618",
       publisher: "Edito da",
       cta: "Scopri il libro",
     },
@@ -346,6 +350,8 @@ window.SITE_CONTENT = {
       kicker: "Teaching",
       title: "Teaching & speaking",
       items: [
+        "Guest lecture to the final-year classes of the «Eschilo» sports-science high school in Gela, as part of the school's careers-guidance programme (2026)",
+        "Speaker at the national launch of «Le espressioni della forza», inside an FIPE course for Olympic weightlifting coaches (CrossFit Corsico, Milan, 2025)",
         "Regional Trainer-Educator, FPI (Italian Boxing Federation), since 2011",
         "Speaker, with Emanuele Renzini (women's national team coach), at the FPI seminar on strength training in women's boxing (Gallipoli, 2013)",
         "Lecturer in training methodology — course for aspiring FPI coaches (Bari, 2014)",
@@ -376,8 +382,10 @@ window.SITE_CONTENT = {
     },
     book: {
       kicker: "The book",
-      title: "«Le Espressioni della Forza»",
-      text: "My book, published by Calzetti & Mariucci: a journey through strength and its expressions, from theory to practical application.",
+      title: "«Le espressioni della forza»",
+      subtitle: "Bosco's methodology for neuromuscular conditioning through the Bodygon",
+      text: "My book gathers Carmelo Bosco's scientific legacy in neuromuscular conditioning and makes it operational: from theory to measurement in the gym, all the way to the Bodygon. The preface is by Sebastiano Corbu, coach of the Italian Olympic weightlifting national team.",
+      meta: "Calzetti & Mariucci Editori, 2025 · ISBN 9788860287618",
       publisher: "Published by",
       cta: "Discover the book",
     },
