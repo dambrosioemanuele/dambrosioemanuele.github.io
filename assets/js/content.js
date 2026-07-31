@@ -10,7 +10,7 @@ window.SITE_CONTENT = {
   meta: { defaultLang: "it", languages: ["it", "en"], domain: "emanueledambrosio.com" },
 
   // Locale-independent.
-  links: { book: "https://calzetti-mariucci.it/prodotto/le-espressioni-della-forza", email: "sportformazione@libero.it" },
+  links: { book: "https://calzetti-mariucci.it/prodotto/le-espressioni-della-forza", email: "dambrosioemanuele1983@gmail.com" },
 
   // Textbooks Emanuele studied — locale-independent titles. Fill from his list.
   studyBooks: [],
@@ -155,7 +155,7 @@ window.SITE_CONTENT = {
       items: [
         "Lezione alle classi quinte del Liceo Scientifico Sportivo «Eschilo» di Gela, nell'ambito delle attività di formazione e orientamento dell'istituto (2026)",
         "Relatore alla presentazione nazionale de «Le espressioni della forza» dentro un corso FIPE per tecnici di sollevamento pesi olimpico (CrossFit Corsico, Milano, 2025)",
-        "Docente Formatore Regionale FPI (Federazione Pugilistica Italiana), dal 2011",
+        "Docente Formatore Regionale FPI (Federazione Pugilistica Italiana), dal 2011 al 2014",
         "Relatore, con Emanuele Renzini (all. nazionale femminile), al seminario FPI sull'allenamento della forza nel pugilato femminile (Gallipoli, 2013)",
         "Docente di metodologia dell'allenamento — corso per aspiranti tecnici FPI (Bari, 2014)",
         "Docente formatore in corsi per la qualifica CONI di personal trainer (Gela, La Spezia, 2016)",
@@ -352,7 +352,7 @@ window.SITE_CONTENT = {
       items: [
         "Guest lecture to the final-year classes of the «Eschilo» sports-science high school in Gela, as part of the school's careers-guidance programme (2026)",
         "Speaker at the national launch of «Le espressioni della forza», inside an FIPE course for Olympic weightlifting coaches (CrossFit Corsico, Milan, 2025)",
-        "Regional Trainer-Educator, FPI (Italian Boxing Federation), since 2011",
+        "Regional Trainer-Educator, FPI (Italian Boxing Federation), from 2011 to 2014",
         "Speaker, with Emanuele Renzini (women's national team coach), at the FPI seminar on strength training in women's boxing (Gallipoli, 2013)",
         "Lecturer in training methodology — course for aspiring FPI coaches (Bari, 2014)",
         "Educator in CONI certification courses for personal trainers (Gela, La Spezia, 2016)",
