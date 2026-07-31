@@ -61,7 +61,7 @@ window.SITE_CONTENT = {
         "Il titolo di quella tesi — <em>la forza e le sue espressioni</em> — è diventato, anni dopo, il titolo del mio libro.",
       h2: "Il riconoscimento della federazione",
       p2:
-        "Nel 2011 il mio contributo sulla metodologia dell'allenamento viene pubblicato sul sito ufficiale della <strong>Federazione Pugilistica Italiana</strong> come apporto innovativo. Dopo averne verificato di persona il valore didattico e scientifico, <strong>Massimo Sciotti</strong> — allora responsabile della formazione dei tecnici nazionali — dispone l'inserimento del mio nome nell'elenco dei formatori regionali FPI, per i comitati di Puglia e Basilicata, nella materia metodologia dell'allenamento.",
+        "Nel 2011 il mio contributo sulla metodologia dell'allenamento viene pubblicato sul sito ufficiale della <strong>Federazione Pugilistica Italiana</strong> come apporto innovativo. Dopo averne verificato di persona il valore didattico e scientifico, <strong>Massimo Scioti</strong> — allora responsabile della formazione dei tecnici nazionali — dispone l'inserimento del mio nome nell'elenco dei formatori regionali FPI, per i comitati di Puglia e Basilicata, nella materia metodologia dell'allenamento.",
       h3: "Sul palco, tra i relatori",
       p3:
         "Nel 2013, durante un raduno collegiale della FPI a Gallipoli, vengo chiamato come relatore insieme a <strong>Emanuele Renzini</strong>, all'epoca allenatore della nazionale femminile di pugilato, per un seminario dedicato all'allenamento della forza nel pugilato femminile.",
@@ -258,7 +258,7 @@ window.SITE_CONTENT = {
         "The title of that thesis — <em>strength and its expressions</em> — became, years later, the title of my book.",
       h2: "Recognised by the federation",
       p2:
-        "In 2011 my contribution on training methodology was published on the official website of the <strong>Italian Boxing Federation</strong> (FPI) as an innovative one. After personally verifying its educational and scientific value, <strong>Massimo Sciotti</strong> — then head of national coach education — added my name to the roster of FPI regional trainers, for the Puglia and Basilicata committees, in the field of training methodology.",
+        "In 2011 my contribution on training methodology was published on the official website of the <strong>Italian Boxing Federation</strong> (FPI) as an innovative one. After personally verifying its educational and scientific value, <strong>Massimo Scioti</strong> — then head of national coach education — added my name to the roster of FPI regional trainers, for the Puglia and Basilicata committees, in the field of training methodology.",
       h3: "On stage, among the speakers",
       p3:
         "In 2013, during an FPI training camp in Gallipoli, I was invited to speak alongside <strong>Emanuele Renzini</strong>, at the time coach of the women's national boxing team, for a seminar on strength training in women's boxing.",
