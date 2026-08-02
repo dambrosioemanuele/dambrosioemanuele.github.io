@@ -27,7 +27,7 @@ window.SITE_CONTENT = {
       name: "Emanuele d'Ambrosio",
       tagline: "Lo studio della forza, applicato sul campo.",
       intro:
-        "Laurea in Scienze Motorie, chinesiologo e massofisioterapista. Dalla ricerca sulla forza — la mia tesi, poi diventata un libro — al lavoro quotidiano con atleti e persone.",
+        "Laurea in Scienze Motorie, chinesiologo e massofisioterapista. Dalla ricerca sulla forza, la mia tesi che ha posto le basi per un libro, al lavoro quotidiano con atleti e persone.",
       ctaBook: "Il libro",
       ctaContact: "Contatti",
     },
@@ -51,7 +51,7 @@ window.SITE_CONTENT = {
         "A Urbino non ho aspettato la laurea per cominciare. Già dal primo anno conseguo la qualifica tecnica federale con la <strong>FIPCF</strong> — oggi FIPE, la federazione italiana di pesistica — e, nello stesso periodo, il diploma in tecniche del massaggio. Nel 2006 arrivano la qualifica di istruttore giovanile e aspirante tecnico di pugilato con la <strong>Federazione Pugilistica Italiana</strong> e l'abilitazione come consulente di educazione motoria per la scuola primaria, tra la facoltà di Scienze Motorie e la Scuola Regionale dello Sport delle Marche. Sono anni in cui l'aula e la palestra procedono insieme: si studia, si insegna, si incontrano persone.",
       capMyers:
         "Urbino, durante un ciclo di seminari sulla pallacanestro: il piacere di conoscere il mitico Carlton Myers.",
-      hThesis: "La tesi che è diventata un libro",
+      hThesis: "La tesi che ha posto le basi per un libro",
       capThesis:
         "La mia tesi di laurea in Scienze Motorie, Urbino. Non un punto di arrivo, ma il trampolino della mia vita professionale.",
       p1:
@@ -106,8 +106,11 @@ window.SITE_CONTENT = {
       title: "Formazione & qualifiche",
       items: [
         { year: "oggi", label: "Chinesiologo professionista (L. 4/2013, UNC n°10972)" },
+        { year: "2026", label: "Performance Coach certificato: Parisi Speed School, Napoli" },
+        { year: "dal 2024", label: "Docente formatore nazionale Libertas, ente di promozione sportiva riconosciuto dal CONI" },
         { year: "2018", label: "Diploma di massofisioterapista (L. 403/71) — agenzia formativa Athena, Molise" },
         { year: "2016", label: "Brevetto del dispositivo PerfecTraining (poi Bodygon)" },
+        { year: "2015 – 2017", label: "Formatore nazionale MIVASS nei corsi di qualificazione in ambito fitness e sportivo" },
         { year: "2012", label: "Perfezionamento universitario «Riatletizzazione motoria nella riabilitazione sportiva» — «G. D'Annunzio» Chieti-Pescara (dir. R. Saggini)" },
         { year: "2011", label: "Docente Formatore Regionale FPI (Federazione Pugilistica Italiana)" },
         { year: "2009", label: "Laurea in Scienze delle Attività Motorie e Sportive — Università di Urbino «Carlo Bo» (tesi sulla forza nel pugilato, relatore N. Silvaggi)" },
@@ -140,6 +143,7 @@ window.SITE_CONTENT = {
       title: "Percorso professionale",
       items: [
         { period: "2025 – 2026", label: "Preparatore atletico — Gela Basket (campionato di Serie C vinto, promozione in Serie B)" },
+        { period: "2022 – oggi", label: "Massofisioterapista libero professionista presso lo studio di medicina fisica e riabilitativa Rehab (dott. S. Abela, Gela)" },
         { period: "2019 – oggi", label: "Gestore dello Sporting Club Antares (Gela) — personal trainer, massofisioterapista, preparatore atletico" },
         { period: "2019", label: "Preparatore atletico — Gela Calcio (prima categoria)" },
         { period: "2018 – 2019", label: "Personal trainer e massofisioterapista — centro Olilab (Gela)" },
@@ -155,6 +159,11 @@ window.SITE_CONTENT = {
       items: [
         "Lezione alle classi quinte del Liceo Scientifico Sportivo «Eschilo» di Gela, nell'ambito delle attività di formazione e orientamento dell'istituto (2026)",
         "Relatore alla presentazione nazionale de «Le espressioni della forza» dentro un corso FIPE per tecnici di sollevamento pesi olimpico (CrossFit Corsico, Milano, 2025)",
+        "Docente formatore nazionale per la Libertas, ente di promozione sportiva riconosciuto dal CONI, nei corsi di qualifica del mondo fitness e sportivo (dal 2024)",
+        "Relatore e divulgatore tecnico-scientifico a RiminiWellness: presentazione del Bodygon e anteprima de «Le espressioni della forza» (2024)",
+        "Relatore alla presentazione in anteprima del Bodygon nella manifestazione pugilistica Umbria vs Fiamme Oro, con ospite l'olimpionico Roberto Cammarelle (Scheggia e Pascelupo, 2023)",
+        "Organizzatore e docente nei corsi per istruttori di sala attrezzi e bodybuilding della Libertas (club Antares, Gela, 2024 e 2025)",
+        "Docente di metodologia dell'allenamento nel corso per istruttori di sala pesi del comitato regionale ENDAS Sicilia (Scicli, 2022)",
         "Docente Formatore Regionale FPI (Federazione Pugilistica Italiana), dal 2011 al 2014",
         "Relatore, con Emanuele Renzini (all. nazionale femminile), al seminario FPI sull'allenamento della forza nel pugilato femminile (Gallipoli, 2013)",
         "Docente di metodologia dell'allenamento — corso per aspiranti tecnici FPI (Bari, 2014)",
@@ -224,7 +233,7 @@ window.SITE_CONTENT = {
       name: "Emanuele d'Ambrosio",
       tagline: "The study of strength, applied in the field.",
       intro:
-        "Sport-science graduate, kinesiologist and physical therapist. From research on strength — my thesis, later a book — to daily work with athletes and people.",
+        "Sport-science graduate, kinesiologist and physical therapist. From research on strength, the thesis that laid the groundwork for a book, to daily work with athletes and people.",
       ctaBook: "The book",
       ctaContact: "Contact",
     },
@@ -248,7 +257,7 @@ window.SITE_CONTENT = {
         "At Urbino I didn't wait for my degree to get started. In my very first year I earned my federal coaching qualification with <strong>FIPCF</strong> — today FIPE, the Italian weightlifting federation — and, in the same period, a diploma in massage techniques. In 2006 came my qualification as youth instructor and trainee boxing coach with the <strong>Italian Boxing Federation</strong> (FPI), and my certification as a movement-education consultant for primary schools, between the Faculty of Sport Science and the Marche Regional School of Sport. Those were years in which lecture hall and gym moved together: studying, teaching, meeting people.",
       capMyers:
         "Urbino, during a seminar series on basketball: the pleasure of meeting the legendary Carlton Myers.",
-      hThesis: "The thesis that became a book",
+      hThesis: "The thesis that laid the groundwork for a book",
       capThesis:
         "My degree thesis in Sport Science, Urbino. Not a finish line, but the springboard of my professional life.",
       p1:
@@ -303,8 +312,11 @@ window.SITE_CONTENT = {
       title: "Education & qualifications",
       items: [
         { year: "today", label: "Professional kinesiologist (It. Law 4/2013, UNC n°10972)" },
+        { year: "2026", label: "Certified Performance Coach: Parisi Speed School, Naples" },
+        { year: "since 2024", label: "National trainer-educator for Libertas, a sports promotion body recognised by CONI" },
         { year: "2018", label: "Physical therapist diploma (It. Law 403/71) — Athena training agency, Molise" },
         { year: "2016", label: "Patent for the PerfecTraining device (later Bodygon)" },
+        { year: "2015 – 2017", label: "National trainer-educator for MIVASS in fitness and sports qualification courses" },
         { year: "2012", label: "University specialization in motor re-athletization for sports rehabilitation — «G. D'Annunzio» Chieti-Pescara (dir. R. Saggini)" },
         { year: "2011", label: "Regional Trainer-Educator, FPI (Italian Boxing Federation)" },
         { year: "2009", label: "Degree in Sport and Movement Sciences — University of Urbino «Carlo Bo» (thesis on strength in boxing, supervisor N. Silvaggi)" },
@@ -337,6 +349,7 @@ window.SITE_CONTENT = {
       title: "Professional path",
       items: [
         { period: "2025 – 2026", label: "Athletic coach — Gela Basket (Serie C championship won, promoted to Serie B)" },
+        { period: "2022 – now", label: "Self-employed physical therapist at the Rehab physical and rehabilitation medicine practice (Dr. S. Abela, Gela)" },
         { period: "2019 – now", label: "Manager of the Antares Sporting Club (Gela) — personal trainer, physical therapist, athletic coach" },
         { period: "2019", label: "Athletic coach — Gela Calcio (first division, amateur)" },
         { period: "2018 – 2019", label: "Personal trainer and physical therapist — Olilab center (Gela)" },
@@ -352,6 +365,11 @@ window.SITE_CONTENT = {
       items: [
         "Guest lecture to the final-year classes of the «Eschilo» sports-science high school in Gela, as part of the school's careers-guidance programme (2026)",
         "Speaker at the national launch of «Le espressioni della forza», inside an FIPE course for Olympic weightlifting coaches (CrossFit Corsico, Milan, 2025)",
+        "National trainer-educator for Libertas, a sports promotion body recognised by CONI, in fitness and sports qualification courses (since 2024)",
+        "Speaker and technical-scientific communicator at RiminiWellness: presenting the Bodygon and previewing «Le espressioni della forza» (2024)",
+        "Speaker at the Bodygon preview during the Umbria vs Fiamme Oro boxing event, with Olympic champion Roberto Cammarelle as guest (Scheggia e Pascelupo, 2023)",
+        "Organiser and lecturer in the Libertas courses for weights-room and bodybuilding instructors (Antares club, Gela, 2024 and 2025)",
+        "Lecturer in training methodology on the weights-room instructor course of the ENDAS Sicilia regional committee (Scicli, 2022)",
         "Regional Trainer-Educator, FPI (Italian Boxing Federation), from 2011 to 2014",
         "Speaker, with Emanuele Renzini (women's national team coach), at the FPI seminar on strength training in women's boxing (Gallipoli, 2013)",
         "Lecturer in training methodology — course for aspiring FPI coaches (Bari, 2014)",
