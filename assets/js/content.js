@@ -72,7 +72,7 @@ window.SITE_CONTENT = {
         "La forza non vive senza la salute del movimento. Nel 2012 conseguo all'Università «G. D'Annunzio» di Chieti-Pescara il perfezionamento universitario in <em>riatletizzazione motoria nella riabilitazione sportiva</em>, sotto la direzione del prof. Raul Saggini, alla Facoltà di Medicina e Chirurgia. Tra il 2014 e il 2018 completo questo percorso qualificandomi come massoterapista, idroterapista e infine massofisioterapista presso l'agenzia formativa Athena, in Molise.",
       h5: "Dall'intuizione al brevetto",
       p5:
-        "Nel 2016 comincia la strada che porta allo sviluppo del dispositivo <strong>PerfecTraining</strong> — evolutosi nell'attuale <a class='hl-link' href='https://bodygon.com' target='_blank' rel='noopener noreferrer'>Bodygon</a> — e ai relativi brevetti. È il punto in cui lo studio della forza diventa uno strumento, e vent'anni di campo diventano tecnologia. Nella stagione 2024/2025 il Bodygon è stato sponsor della <strong>Federazione Italiana Pesistica</strong>, che da allora lo ha in dotazione. La ricerca intanto continua: oggi conduco uno studio sperimentale esplorativo sugli effetti acuti della serie lenta a sfinimento sulla performance neuromuscolare.",
+        "Nel 2016 comincia la strada che porta allo sviluppo del dispositivo <strong>PerfecTraining</strong> — evolutosi nell'attuale <a class='hl-link' href='https://bodygon.com' target='_blank' rel='noopener noreferrer'>Bodygon</a> — e ai relativi brevetti. È il punto in cui lo studio della forza diventa uno strumento, e vent'anni di campo diventano tecnologia. Nel 2019, al convegno su sport e tecnologia dell'Università di Roma Tor Vergata, il prof. Giuseppe Annino lo cita come possibilità tecnologica innovativa; nella stagione 2024/2025 il Bodygon è sponsor della <strong>Federazione Italiana Pesistica</strong>, che da allora lo ha in dotazione. La ricerca intanto continua: oggi conduco uno studio sperimentale esplorativo sugli effetti acuti della serie lenta a sfinimento sulla performance neuromuscolare.",
     },
     wins: {
       kicker: "Sul campo",
@@ -173,7 +173,8 @@ window.SITE_CONTENT = {
         "Organizzatore e docente — corso per istruttori di functional training (Antares, Gela, 2017)",
         "Relatore al seminario «La forza e le sue espressioni»: monitoraggio e allenamento con il PerfecTraining (Pegaso Università Telematica, 2020)",
         "Relatore nelle presentazioni del dispositivo PerfecTraining in tutta Italia (Perugia, Catania, Jesi, La Spezia, Pontecagnano, centro nazionale FPI)",
-        "Test dell'intera Nazionale femminile di pugilato al centro nazionale FPI di Santa Maria degli Angeli, Irma Testa compresa, e degli azzurri del fioretto al centro federale di Jesi",
+        "Test dell'intera Nazionale femminile di pugilato al centro nazionale FPI di Santa Maria degli Angeli, Irma Testa e Guido Vianello compresi (2018), e degli azzurri del fioretto al centro federale di Jesi (2019)",
+        "Relatore al convegno «Benessere sociale nei pazienti oncologici», con il Comune di Gela e la FAVO, al Teatro Antidoto di Gela (2025)",
       ],
     },
     cpd: {
@@ -280,7 +281,7 @@ window.SITE_CONTENT = {
         "Strength cannot live without healthy movement. In 2012 I earned a university specialization in <em>motor re-athletization for sports rehabilitation</em> at the «G. D'Annunzio» University of Chieti-Pescara, under Prof. Raul Saggini, at the Faculty of Medicine and Surgery. Between 2014 and 2018 I completed this path, qualifying as a massage therapist, hydrotherapist and finally physical therapist at the Athena training agency, in Molise.",
       h5: "From intuition to patent",
       p5:
-        "In 2016 began the road that led to the <strong>PerfecTraining</strong> device — which evolved into today's <a class='hl-link' href='https://bodygon.com' target='_blank' rel='noopener noreferrer'>Bodygon</a> — and its patents. It is the point where the study of strength became a tool, and twenty years in the field became technology. In the 2024/2025 season the Bodygon was a sponsor of the <strong>Italian Weightlifting Federation</strong>, which has used it ever since. The research continues: I am currently running an exploratory experimental study on the acute effects of slow sets to failure on neuromuscular performance.",
+        "In 2016 began the road that led to the <strong>PerfecTraining</strong> device — which evolved into today's <a class='hl-link' href='https://bodygon.com' target='_blank' rel='noopener noreferrer'>Bodygon</a> — and its patents. It is the point where the study of strength became a tool, and twenty years in the field became technology. In 2019, at the sport-and-technology conference of Tor Vergata University in Rome, Prof. Giuseppe Annino cited it as an innovative technological option; in the 2024/2025 season the Bodygon was a sponsor of the <strong>Italian Weightlifting Federation</strong>, which has used it ever since. The research continues: I am currently running an exploratory experimental study on the acute effects of slow sets to failure on neuromuscular performance.",
     },
     wins: {
       kicker: "In the field",
@@ -381,7 +382,8 @@ window.SITE_CONTENT = {
         "Organiser and educator — functional-training instructor course (Antares, Gela, 2017)",
         "Speaker at the seminar «Strength and its expressions»: monitoring and training with PerfecTraining (Pegaso Telematic University, 2020)",
         "Speaker at PerfecTraining device presentations across Italy (Perugia, Catania, Jesi, La Spezia, Pontecagnano, FPI national centre)",
-        "Testing of the entire women's national boxing team at the FPI national centre in Santa Maria degli Angeli, Irma Testa included, and of the national foil fencers at the Jesi federal centre",
+        "Testing of the entire women's national boxing team at the FPI national centre in Santa Maria degli Angeli, Irma Testa and Guido Vianello included (2018), and of the national foil fencers at the Jesi federal centre (2019)",
+        "Speaker at the «Social wellbeing in cancer patients» conference, with the City of Gela and FAVO, at the Teatro Antidoto in Gela (2025)",
       ],
     },
     cpd: {
