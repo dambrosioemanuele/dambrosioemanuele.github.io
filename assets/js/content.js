@@ -9,13 +9,15 @@
 window.SITE_CONTENT = {
   meta: { defaultLang: "it", languages: ["it", "en"], domain: "emanueledambrosio.com" },
 
-  // Locale-independent.
-  links: { book: "https://calzetti-mariucci.it/prodotto/le-espressioni-della-forza", email: "dambrosioemanuele1983@gmail.com" },
+  // Locale-independent. A locale's own `links` (e.g. the book edition in that
+  // language) takes precedence over these for [data-link].
+  links: { publisher: "https://calzetti-mariucci.it/prodotto/le-espressioni-della-forza", email: "dambrosioemanuele1983@gmail.com" },
 
   // Textbooks Emanuele studied — locale-independent titles. Fill from his list.
   studyBooks: [],
 
   it: {
+    links: { book: "https://www.amazon.it/dp/8860287618" },
     seo: {
       title: "Emanuele d'Ambrosio — forza, coaching, formazione",
       description:
@@ -225,6 +227,7 @@ window.SITE_CONTENT = {
   },
 
   en: {
+    links: { book: "https://www.amazon.com/dp/B0HQXHTVWR" },
     seo: {
       title: "Emanuele d'Ambrosio — strength, coaching, education",
       description:
@@ -406,11 +409,11 @@ window.SITE_CONTENT = {
     },
     book: {
       kicker: "The book",
-      title: "«Le espressioni della forza»",
-      subtitle: "Bosco's methodology for neuromuscular conditioning through the Bodygon",
+      title: "«The Expressions of Strength»",
+      subtitle: "Bosco's methodology for neuromuscular conditioning with the Bodygon",
       text: "My book gathers Carmelo Bosco's scientific legacy in neuromuscular conditioning and makes it operational: from theory to measurement in the gym, all the way to the Bodygon. The preface is by Sebastiano Corbu, coach of the Italian Olympic weightlifting national team.",
-      meta: "Calzetti & Mariucci Editori, 2025 · ISBN 9788860287618",
-      publisher: "Published by",
+      meta: "Independently published, 2026 · ISBN 9798140366438",
+      publisher: "Original Italian edition published by",
       cta: "Discover the book",
     },
     news: {

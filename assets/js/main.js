@@ -57,7 +57,8 @@
     if (dict.seo && dict.seo.title) document.title = dict.seo.title;
 
     document.querySelectorAll("[data-link]").forEach(function (el) {
-      var href = C.links && C.links[el.getAttribute("data-link")];
+      var key = el.getAttribute("data-link");
+      var href = (dict.links && dict.links[key]) || (C.links && C.links[key]);
       if (href) el.setAttribute("href", href);
     });
 
