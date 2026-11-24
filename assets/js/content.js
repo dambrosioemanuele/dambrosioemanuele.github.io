@@ -205,6 +205,8 @@ window.SITE_CONTENT = {
       meta: "Calzetti & Mariucci Editori, 2025 · ISBN 9788860287618",
       publisher: "Edito da",
       cta: "Scopri il libro",
+      image: "./assets/img/book-it.jpg",
+      imageAlt: "Il libro «Le espressioni della forza» di Emanuele d'Ambrosio, fronte e retro",
     },
     news: {
       kicker: "Aggiornamenti",
@@ -415,6 +417,8 @@ window.SITE_CONTENT = {
       meta: "Independently published, 2026 · ISBN 9798140366438",
       publisher: "Original Italian edition published by",
       cta: "Discover the book",
+      image: "./assets/img/book-en.jpg",
+      imageAlt: "The book «The Expressions of Strength» by Emanuele d'Ambrosio on a bookshelf",
     },
     news: {
       kicker: "Updates",

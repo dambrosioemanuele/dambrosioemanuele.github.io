@@ -1,8 +1,9 @@
 /*
  * Tiny i18n renderer + viewport-based lazy loading. No framework, no build.
  *
- * i18n: fills [data-i18n] text, [data-i18n-meta] content, [data-link] hrefs from
- *       the active locale (dotted key paths). Language persists in localStorage
+ * i18n: fills [data-i18n] text, [data-i18n-meta] content, [data-i18n-src] and
+ *       [data-i18n-alt] image attributes, [data-link] hrefs from the active
+ *       locale (dotted key paths). Language persists in localStorage
  *       and honors ?lang=.
  * Lazy: images use native loading="lazy"; the (heavy) video's source is attached
  *       only when it scrolls near the viewport (IntersectionObserver).
@@ -55,6 +56,16 @@
       if (val != null) el.setAttribute("content", val);
     });
     if (dict.seo && dict.seo.title) document.title = dict.seo.title;
+
+    // Locale-specific images (e.g. the book edition in that language).
+    document.querySelectorAll("[data-i18n-src]").forEach(function (el) {
+      var val = resolve(dict, el.getAttribute("data-i18n-src"));
+      if (val != null) el.setAttribute("src", val);
+    });
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      var val = resolve(dict, el.getAttribute("data-i18n-alt"));
+      if (val != null) el.setAttribute("alt", val);
+    });
 
     document.querySelectorAll("[data-link]").forEach(function (el) {
       var key = el.getAttribute("data-link");

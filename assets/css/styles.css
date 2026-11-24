@@ -256,6 +256,16 @@ a { color: inherit; }
 .book-subtitle { color: var(--muted); font-size: 1.02rem; line-height: 1.5; margin: -0.4rem 0 1.1rem; max-width: 56ch; font-style: italic; }
 .book-text { color: #e9e9ec; margin: 0 0 1.1rem; max-width: 60ch; }
 .book-meta { color: var(--muted); font-size: 0.9rem; margin: 0 0 1.6rem; }
+/* Book photo: beside the text on wide screens, after it when stacked. The
+   last text row is flexible so a tall photo never stretches the gaps. */
+.book-figure { margin: 2rem 0 0; max-width: 280px; }
+.book-figure img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); background: #000; box-shadow: 0 18px 44px rgba(0, 0, 0, 0.55); }
+@media (min-width: 861px) {
+  .book-band { display: grid; grid-template-columns: minmax(0, 62ch) 300px; grid-template-rows: repeat(6, auto) 1fr; column-gap: clamp(2.5rem, 6vw, 5rem); justify-content: start; }
+  .book-band > * { grid-column: 1; }
+  .book-band > .btn { justify-self: start; align-self: start; }
+  .book-band > .book-figure { grid-column: 2; grid-row: 1 / span 7; max-width: none; margin: 0; }
+}
 .publisher { display: flex; align-items: center; gap: 0.85rem; margin: 0 0 1.8rem; color: var(--muted); flex-wrap: wrap; }
 .publisher-label { font-size: 0.92rem; }
 .logo-chip { display: inline-block; background: #fff; border-radius: 10px; padding: 0.55rem 0.9rem; line-height: 0; transition: transform 0.15s ease; }
