@@ -341,3 +341,72 @@ a { color: inherit; }
 @media (max-width: 760px) {
   .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
 }
+
+/* ---- Wide screens: two columns ----
+   Below 1024px nothing here applies and the page stays one column. On a wide
+   screen the content uses the width: the hero puts the portrait beside the
+   name, each story chapter keeps its text left and its photos right, short
+   neighbouring sections sit side by side, long lists run in two columns. */
+@media (min-width: 1024px) {
+  :root { --maxw: 1200px; }
+
+  /* Hero: portrait beside the name. */
+  .hero {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    column-gap: clamp(2.5rem, 5vw, 4.5rem);
+    align-items: start;
+    text-align: left;
+    padding-block: clamp(3rem, 9vh, 5.5rem) clamp(2.5rem, 7vh, 4.5rem);
+  }
+  .hero-portrait { grid-row: 1 / span 5; align-self: center; width: 230px; margin: 0; }
+  .hero > :not(.hero-portrait) { grid-column: 2; }
+  .hero-intro { margin-left: 0; max-width: 60ch; }
+  .cta-row { justify-content: flex-start; }
+
+  /* Story: one chapter per row, text left, photos right. */
+  .story, .story > * { max-width: none; }
+  .story-lead { max-width: 62ch; }
+  .chapter, .chapter-pair {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.78fr);
+    column-gap: clamp(2.5rem, 5vw, 4.5rem);
+    align-items: start;
+  }
+  .chapter-pair { grid-template-columns: 1fr 1fr; }
+  .chapter + .chapter, .chapter + .chapter-pair {
+    margin-top: 2.4rem;
+    padding-top: 2.4rem;
+    border-top: 1px solid var(--line);
+  }
+  .chapter-text > .story-h:first-child { margin-top: 0; }
+  .chapter-text > :last-child { margin-bottom: 0; }
+  .chapter-text p { max-width: 64ch; }
+  .chapter-text .story-quote { margin: 1.8rem 0 0; }
+  .chapter-media .story-figure { margin: 0 0 1.6rem; }
+  .chapter-media .story-figure:last-child { margin-bottom: 0; }
+  .chapter-media .story-figure-thesis { max-width: 240px; }
+
+  /* Short neighbouring sections side by side. */
+  .section-pair {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: clamp(2.5rem, 5vw, 4.5rem);
+    padding-inline: var(--gutter);
+  }
+  .section-pair > .section { padding-inline: 0; }
+
+  /* Teaching: the long list in two columns, read top to bottom. */
+  .bullet-list { display: block; columns: 2; column-gap: clamp(2.5rem, 5vw, 4.5rem); max-width: none; }
+  .bullet-list li { break-inside: avoid; margin-bottom: 0.7rem; }
+
+  /* News: the course video and the dedication side by side. */
+  .news-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+    column-gap: 2rem;
+    align-items: start;
+  }
+  .news-item > .news-title, .news-item > p { grid-column: 1 / -1; }
+  .news-item .media-portrait img { width: 100%; max-height: none; }
+}
