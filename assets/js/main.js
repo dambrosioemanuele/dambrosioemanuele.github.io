@@ -5,8 +5,11 @@
  *       [data-i18n-alt] image attributes, [data-i18n-list] lists, [data-link]
  *       hrefs from the active locale (dotted key paths). Language persists in localStorage
  *       and honors ?lang=.
- * Lazy: images use native loading="lazy"; the (heavy) video's source is attached
- *       only when it scrolls near the viewport (IntersectionObserver).
+ * Lazy: every image below the first screen has its real file in data-src and a
+ *       placeholder of the same proportions in src; the file is downloaded only
+ *       when the image is about to enter the screen (IntersectionObserver), so
+ *       nothing moves when it arrives. Carousel slides work the same way, one
+ *       slide at a time. Videos download only when clicked.
  */
 (function () {
   "use strict";
@@ -44,7 +47,7 @@
       if (val != null) el.textContent = val;
     });
 
-    // Rich text (author-controlled content only — safe to inject as HTML).
+    // Rich text (author-controlled content only, so safe to inject as HTML).
     // Lets the narrative carry inline emphasis and links.
     document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
       var val = resolve(dict, el.getAttribute("data-i18n-html"));
@@ -68,10 +71,11 @@
       });
     });
 
-    // Locale-specific images (e.g. the book edition in that language).
+    // Locale-specific images (e.g. the book edition in that language). An image
+    // still waiting for the lazy loader gets the new file in data-src.
     document.querySelectorAll("[data-i18n-src]").forEach(function (el) {
       var val = resolve(dict, el.getAttribute("data-i18n-src"));
-      if (val != null) el.setAttribute("src", val);
+      if (val != null) el.setAttribute(el.hasAttribute("data-src") ? "data-src" : "src", val);
     });
     document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
       var val = resolve(dict, el.getAttribute("data-i18n-alt"));
@@ -235,6 +239,40 @@
     update();
   }
 
+  // ---- Lazy images ----
+  var lazyObserver = null;
+
+  function loadImage(img) {
+    var src = img.getAttribute("data-src");
+    if (!src) return;
+    img.removeAttribute("data-src");
+    img.setAttribute("src", src);
+  }
+
+  // Start watching every image still holding its file in data-src. Safe to
+  // call again after new images are added (the carousel does).
+  function observeLazyImages() {
+    var pending = document.querySelectorAll("img[data-src]");
+    if (!("IntersectionObserver" in window)) {
+      pending.forEach(loadImage);
+      return;
+    }
+    if (!lazyObserver) {
+      lazyObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          lazyObserver.unobserve(e.target);
+          loadImage(e.target);
+        });
+      }, { rootMargin: "200px 0px" });
+    }
+    pending.forEach(function (img) { lazyObserver.observe(img); });
+  }
+
+  function placeholder(w, h) {
+    return "data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 " + w + " " + h + "%27/%3E";
+  }
+
   // ---- Photo carousel + lightbox ----
   // A [data-carousel="key"] box shows C[key] (a list of {src, it, en}) as a
   // row of slides that scrolls sideways (swipe on touch, arrows otherwise).
@@ -251,6 +289,21 @@
     if (count && n) count.textContent = (Math.min(slideIndex(track), n - 1) + 1) + " / " + n;
   }
 
+  // Load the slide at index i (wrapping) right away, remembering it across
+  // language switches, which rebuild the slides.
+  function loadSlide(track, i) {
+    var n = track.children.length;
+    if (!n) return;
+    i = (i + n) % n;
+    var img = track.children[i].querySelector("img");
+    if (img && img.hasAttribute("data-src")) {
+      if (lazyObserver) lazyObserver.unobserve(img);
+      loadImage(img);
+    }
+    var done = track.dataset.loaded ? track.dataset.loaded.split(",") : [];
+    if (done.indexOf(String(i)) === -1) { done.push(String(i)); track.dataset.loaded = done.join(","); }
+  }
+
   function renderCarousels(dict, lang) {
     var ui = dict.ui || {};
     document.querySelectorAll("[data-carousel]").forEach(function (box) {
@@ -264,9 +317,10 @@
         slide.className = "carousel-slide";
         slide.setAttribute("aria-label", (ui.enlarge || "") + ": " + (p[lang] || ""));
         var img = document.createElement("img");
-        img.src = p.src;
+        var loaded = track.dataset.loaded && track.dataset.loaded.split(",").indexOf(String(i)) !== -1;
+        img.src = loaded ? p.src : placeholder(16, 9);
+        if (!loaded) img.setAttribute("data-src", p.src);
         img.alt = p[lang] || "";
-        img.loading = i === 0 ? "eager" : "lazy";
         img.decoding = "async";
         slide.appendChild(img);
         slide.addEventListener("click", function () { openLightbox(photos, i, lang, ui, box); });
@@ -278,24 +332,69 @@
       track.scrollLeft = keep * track.clientWidth;
       updateCount(box);
     });
+    observeLazyImages();
+  }
+
+  // Autoplay: a new photo every 5 seconds, only while the carousel is on
+  // screen, not under the pointer or keyboard focus, the lightbox is closed and
+  // the visitor has not asked the system for reduced motion. Using the arrows
+  // or swiping restarts the wait.
+  var AUTOPLAY_MS = 5000;
+
+  function goTo(track, i) {
+    var n = track.children.length;
+    i = (i + n) % n;
+    loadSlide(track, i);
+    loadSlide(track, i + 1);
+    track.scrollTo({ left: i * track.clientWidth, behavior: "smooth" });
   }
 
   function setupCarousels() {
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     document.querySelectorAll("[data-carousel]").forEach(function (box) {
       var track = box.querySelector(".carousel-track");
+      var visible = false, hover = false, focus = false, timer = null;
+
+      function schedule() {
+        clearTimeout(timer);
+        timer = null;
+        if (reduce || !visible || hover || focus) return;
+        timer = setTimeout(function () {
+          if (lb && !lb.el.hidden) { schedule(); return; }
+          goTo(track, slideIndex(track) + 1);
+          schedule();
+        }, AUTOPLAY_MS);
+      }
+
       box.querySelectorAll(".carousel-btn").forEach(function (btn) {
         btn.addEventListener("click", function () {
-          var n = track.children.length;
-          var next = (slideIndex(track) + Number(btn.getAttribute("data-dir")) + n) % n;
-          track.scrollTo({ left: next * track.clientWidth, behavior: "smooth" });
+          goTo(track, slideIndex(track) + Number(btn.getAttribute("data-dir")));
+          schedule();
         });
       });
       var pending = false;
       track.addEventListener("scroll", function () {
         if (pending) return;
         pending = true;
-        window.requestAnimationFrame(function () { pending = false; updateCount(box); });
+        window.requestAnimationFrame(function () {
+          pending = false;
+          updateCount(box);
+          loadSlide(track, slideIndex(track));
+          loadSlide(track, slideIndex(track) + 1);
+        });
       }, { passive: true });
+      track.addEventListener("touchstart", function () { schedule(); }, { passive: true });
+      box.addEventListener("mouseenter", function () { hover = true; schedule(); });
+      box.addEventListener("mouseleave", function () { hover = false; schedule(); });
+      box.addEventListener("focusin", function () { focus = true; schedule(); });
+      box.addEventListener("focusout", function () { focus = false; schedule(); });
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(function (entries) {
+          visible = entries[0].isIntersecting;
+          if (visible) loadSlide(track, 1);
+          schedule();
+        }, { threshold: 0.5 }).observe(box);
+      }
     });
   }
 
@@ -404,6 +503,7 @@
     setupVideoFacades();
     setupSideNav();
     setupCarousels();
+    observeLazyImages();
   }
 
   if (document.readyState === "loading") {

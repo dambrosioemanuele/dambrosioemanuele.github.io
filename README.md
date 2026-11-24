@@ -1,9 +1,9 @@
-# Emanuele d'Ambrosio — Official Website
+# Emanuele d'Ambrosio, official website
 
 Static one-page personal website for **Emanuele d'Ambrosio**, author of the
 strength-training book *«Le Espressioni della Forza»*.
 
-- **Type**: single-page static site (no build step — plain HTML/CSS/JS).
+- **Type**: single-page static site (no build step, plain HTML/CSS/JS).
 - **Languages**: bilingual **Italian (primary)** + English. Content lives in a
   single source file and drives both locales.
 - **Hosting**: GitHub Pages (free). Served initially at the free `*.github.io`

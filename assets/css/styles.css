@@ -1,4 +1,4 @@
-/* Emanuele d'Ambrosio — one-page site.
+/* Emanuele d'Ambrosio, one-page site.
    Black/white + Bodygon green (#A8FF00). System fonts (no external calls). */
 
 :root {
@@ -89,14 +89,14 @@ a { color: inherit; }
   margin: 0 0 1rem;
 }
 .hero-name {
-  /* NOTE: not uppercase — the name must read "Emanuele d'Ambrosio". */
+  /* NOTE: not uppercase, the name must read "Emanuele d'Ambrosio". */
   font-size: clamp(2.4rem, 8vw, 5rem);
   line-height: 1.04;
   letter-spacing: -0.02em;
   font-weight: 800;
   margin: 0;
 }
-.hero-tagline { font-size: clamp(1.1rem, 2.6vw, 1.5rem); margin: 1rem 0 0; }
+.hero-tagline { font-size: clamp(1.1rem, 2.6vw, 1.5rem); margin: 1rem 0 0; white-space: pre-line; }
 .hero-intro { color: var(--muted); max-width: 46ch; margin: 1.1rem auto 0; }
 
 /* ---- Buttons ---- */
@@ -119,6 +119,8 @@ a { color: inherit; }
 /* ---- Sections ---- */
 .section {
   padding: clamp(2.5rem, 8vh, 5rem) var(--gutter);
+  /* Where the sticky top bar is shown, a jump to a section stops below it. */
+  scroll-margin-top: 3.8rem;
 }
 .section-alt { background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .kicker { text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.72rem; font-weight: 700; color: var(--accent); margin: 0 0 0.6rem; }
@@ -132,7 +134,7 @@ a { color: inherit; }
 .highlights li:last-child { border-bottom: none; }
 .highlights li::before { content: ""; position: absolute; left: 0; top: 0.95rem; width: 8px; height: 8px; border-radius: 2px; background: var(--accent); }
 
-/* Story (narrative) — the section meant to be read slowly. */
+/* Story (narrative), the section meant to be read slowly. */
 .story-band {
   background: var(--bg-soft);
   border-top: 1px solid var(--line);
@@ -188,7 +190,7 @@ a { color: inherit; }
 /* Old, low-resolution photos: keep them small so they stay sharp. */
 .story-figure-small { max-width: 420px; }
 
-/* Athletes & teams — results in the field. Text and photo side by side,
+/* Athletes & teams, results in the field. Text and photo side by side,
    alternating sides so the long page keeps a rhythm. */
 .wins-band { background-image: radial-gradient(900px 400px at 85% -10%, rgba(168, 255, 0, 0.06), transparent 60%); }
 .wins-lead {
@@ -228,7 +230,7 @@ a { color: inherit; }
 .win-fig figcaption { color: var(--muted); font-size: 0.88rem; margin-top: 0.5rem; line-height: 1.5; }
 /* Very tall phone shots: frame them instead of letting them run down the page. */
 .win-tall img { aspect-ratio: 3 / 4; object-fit: cover; object-position: center 25%; }
-/* The trophy plate matters for its inscription — crop to it. */
+/* The trophy plate matters for its inscription, so crop to it. */
 .win-detail img { aspect-ratio: 16 / 10; object-fit: cover; object-position: center 58%; }
 /* Alternate sides so the sequence doesn't read as one long column. */
 .wins > .win:nth-child(even) .win-body { grid-column: 2; }
@@ -251,7 +253,7 @@ a { color: inherit; }
 .card h3 { margin: 0 0 0.5rem; font-size: 1.05rem; }
 .card p { margin: 0; color: #d2d2d8; font-size: 1rem; }
 
-/* Book — left-aligned to the same gutter as every other section. */
+/* Book: left-aligned to the same gutter as every other section. */
 .book-band { background: linear-gradient(180deg, rgba(168,255,0,0.06), transparent); border-top: 1px solid var(--line); }
 .book-subtitle { color: var(--muted); font-size: 1.02rem; line-height: 1.5; margin: -0.4rem 0 1.1rem; max-width: 56ch; font-style: italic; }
 .book-text { color: #e9e9ec; margin: 0 0 1.1rem; max-width: 60ch; }
@@ -354,9 +356,9 @@ a { color: inherit; }
 
 /* Education & qualifications timeline */
 .edu-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.2rem; }
-.edu-list li { display: grid; grid-template-columns: 60px 1fr; gap: 1rem; align-items: baseline; padding: 0.85rem 0; border-bottom: 1px solid var(--line); }
+.edu-list li { display: grid; grid-template-columns: 5.6rem 1fr; gap: 1rem; align-items: baseline; padding: 0.85rem 0; border-bottom: 1px solid var(--line); }
 .edu-list li:last-child { border-bottom: none; }
-.edu-year { color: var(--accent); font-weight: 800; font-size: 0.95rem; }
+.edu-year { color: var(--accent); font-weight: 800; font-size: 0.95rem; white-space: nowrap; }
 .edu-label { color: #e9e9ec; }
 @media (max-width: 520px) {
   .edu-list li { grid-template-columns: 1fr; gap: 0.15rem; }
@@ -396,6 +398,7 @@ a { color: inherit; }
 .contact-address:hover { color: var(--accent); border-color: var(--accent); }
 
 /* Footer */
+.footer-copy { max-width: 90ch; line-height: 1.5; }
 .footer {
   display: flex; align-items: center; justify-content: space-between; gap: 0.5rem 1.5rem; flex-wrap: wrap;
   padding: 1.6rem var(--gutter);
@@ -480,6 +483,7 @@ a { color: inherit; }
 @media (min-width: 1200px) {
   body { display: grid; grid-template-columns: 300px minmax(0, 1fr); }
   body > .nav, .hero { display: none; }
+  .section { scroll-margin-top: 0; }
   main, .footer { grid-column: 2; }
   .side {
     grid-column: 1;
@@ -503,7 +507,7 @@ a { color: inherit; }
   }
   .side-name { font-size: 1.45rem; font-weight: 800; line-height: 1.08; letter-spacing: -0.01em; }
   .side-role { margin: 0; color: var(--accent); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.66rem; font-weight: 700; line-height: 1.6; }
-  .side-tagline { margin: 0; color: var(--muted); font-size: 0.95rem; line-height: 1.45; }
+  .side-tagline { margin: 0; color: var(--muted); font-size: 0.95rem; line-height: 1.45; white-space: pre-line; }
   .side-nav { display: flex; flex-direction: column; margin: 0.4rem 0 0; }
   .side-nav a {
     text-decoration: none; color: var(--muted); font-weight: 600; font-size: 0.92rem;
@@ -514,8 +518,8 @@ a { color: inherit; }
   .side-nav a.is-active { color: var(--accent); border-left-color: var(--accent); }
   /* Bodygon, the book, contact: one under the other, all the same width. */
   .side-cta { display: flex; flex-direction: column; gap: 0.55rem; margin-top: auto; padding-top: 0.6rem; }
-  .side-cta .btn { text-align: center; padding: 0.62rem 0.8rem; }
-  .side-cta .btn-bodygon { display: flex; justify-content: center; align-items: center; }
+  /* All three as tall as the Bodygon one. */
+  .side-cta .btn { display: flex; justify-content: center; align-items: center; height: 2.35rem; padding: 0 0.8rem; line-height: 1; font-size: 0.98rem; }
   .btn-bodygon img { height: 17px; width: auto; }
   .side-lang { justify-content: center; }
 }
@@ -528,7 +532,6 @@ a { color: inherit; }
   .side-tagline { display: none; }
   .side-nav { margin-top: 0.2rem; }
   .side-nav a { padding-top: 0.2rem; padding-bottom: 0.2rem; font-size: 0.88rem; }
-  .side-cta .btn { padding-top: 0.5rem; padding-bottom: 0.5rem; }
 }
 /* Even shorter screens: drop the role line and tighten the index further. */
 @media (min-width: 1200px) and (max-height: 740px) {
