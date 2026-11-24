@@ -364,28 +364,24 @@ a { color: inherit; }
   .hero-intro { margin-left: 0; max-width: 60ch; }
   .cta-row { justify-content: flex-start; }
 
-  /* Story: one chapter per row, text left, photos right. */
+  /* Story, newspaper style: each chapter's heading across the page, its text
+     in two columns, a single photo inside the columns, several photos in one
+     row below the text, all at the same height (each figure grows with its
+     width/height ratio, set inline as --ar). */
   .story, .story > * { max-width: none; }
   .story-lead { max-width: 62ch; }
-  .chapter, .chapter-pair {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 0.78fr);
-    column-gap: clamp(2.5rem, 5vw, 4.5rem);
-    align-items: start;
-  }
-  .chapter-pair { grid-template-columns: 1fr 1fr; }
-  .chapter + .chapter, .chapter + .chapter-pair {
+  .chapter + .chapter {
     margin-top: 2.4rem;
     padding-top: 2.4rem;
     border-top: 1px solid var(--line);
   }
-  .chapter-text > .story-h:first-child { margin-top: 0; }
+  .chapter-text { columns: 2; column-gap: clamp(2.5rem, 5vw, 4rem); }
+  .chapter-text > .story-h { column-span: all; margin-top: 0; }
+  .chapter-text > .story-quote { column-span: all; margin: 1.6rem 0 0; max-width: 46ch; }
   .chapter-text > :last-child { margin-bottom: 0; }
-  .chapter-text p { max-width: 64ch; }
-  .chapter-text .story-quote { margin: 1.8rem 0 0; }
-  .chapter-media .story-figure { margin: 0 0 1.6rem; }
-  .chapter-media .story-figure:last-child { margin-bottom: 0; }
-  .chapter-media .story-figure-thesis { max-width: 240px; }
+  .chapter-text .story-figure { break-inside: avoid; margin: 0.3rem 0 1.3rem; }
+  .chapter-media { display: flex; gap: 1.4rem; align-items: flex-start; margin-top: 1.8rem; }
+  .chapter-media .story-figure { flex: var(--ar, 1) 1 0; min-width: 0; max-width: none; margin: 0; }
 
   /* Short neighbouring sections side by side. */
   .section-pair {
