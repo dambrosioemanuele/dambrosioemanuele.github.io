@@ -447,7 +447,22 @@ a { color: inherit; }
   }
   .side-nav a:hover { color: var(--fg); }
   .side-nav a.is-active { color: var(--accent); border-left-color: var(--accent); }
-  .side-cta { display: flex; flex-direction: column; gap: 0.55rem; margin-top: auto; padding-top: 0.6rem; }
-  .side-cta .btn { text-align: center; padding: 0.62rem 1.2rem; }
+  /* The book across the full width, contact and Bodygon side by side below. */
+  .side-cta { display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem; margin-top: auto; padding-top: 0.6rem; }
+  .side-cta .btn { text-align: center; padding: 0.62rem 0.8rem; }
+  .side-cta .btn-primary { grid-column: 1 / -1; }
+  .side-cta .btn-bodygon { display: flex; justify-content: center; align-items: center; }
+  .btn-bodygon img { height: 17px; width: auto; }
   .side-lang { justify-content: center; }
+}
+/* Short laptop screens: a tighter sidebar so the buttons and the language
+   switch stay in view without scrolling it. */
+@media (min-width: 1200px) and (max-height: 860px) {
+  .side { gap: 0.6rem; padding-top: 1.4rem; padding-bottom: 1.1rem; }
+  .side-portrait { width: 56px; height: 56px; }
+  .side-name { font-size: 1.3rem; }
+  .side-tagline { display: none; }
+  .side-nav { margin-top: 0.2rem; }
+  .side-nav a { padding-top: 0.2rem; padding-bottom: 0.2rem; font-size: 0.88rem; }
+  .side-cta .btn { padding-top: 0.5rem; padding-bottom: 0.5rem; }
 }

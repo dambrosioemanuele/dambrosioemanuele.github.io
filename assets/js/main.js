@@ -70,7 +70,13 @@
     document.querySelectorAll("[data-link]").forEach(function (el) {
       var key = el.getAttribute("data-link");
       var href = (dict.links && dict.links[key]) || (C.links && C.links[key]);
-      if (href) el.setAttribute("href", href);
+      if (!href) return;
+      el.setAttribute("href", href);
+      // Links that leave the site open in a new tab, so the site stays open.
+      if (/^https?:/.test(href)) {
+        el.setAttribute("target", "_blank");
+        el.setAttribute("rel", "noopener noreferrer");
+      }
     });
 
     document.querySelectorAll(".lang [data-lang]").forEach(function (btn) {
