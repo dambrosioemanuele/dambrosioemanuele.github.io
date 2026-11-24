@@ -189,6 +189,34 @@
     });
   }
 
+  // Sidebar: light up the link of the section that has reached 40% of the
+  // screen height. Sections sitting side by side light up together, and the
+  // last link lights up once the page is scrolled to the bottom.
+  function setupSideNav() {
+    var items = Array.prototype.slice.call(document.querySelectorAll(".side-nav a[href^='#']"))
+      .map(function (a) { return { a: a, el: document.getElementById(a.getAttribute("href").slice(1)) }; })
+      .filter(function (x) { return x.el; });
+    if (!items.length) return;
+    var pending = false;
+    function update() {
+      pending = false;
+      var line = window.innerHeight * 0.4;
+      var atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+      var current = items[0];
+      items.forEach(function (x) { if (x.el.getBoundingClientRect().top <= line) current = x; });
+      if (atBottom) current = items[items.length - 1];
+      var top = current.el.getBoundingClientRect().top;
+      items.forEach(function (x) {
+        x.a.classList.toggle("is-active", Math.abs(x.el.getBoundingClientRect().top - top) < 2);
+      });
+    }
+    window.addEventListener("scroll", function () {
+      if (!pending) { pending = true; window.requestAnimationFrame(update); }
+    }, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  }
+
   function init() {
     var yearEl = document.getElementById("year");
     if (yearEl) yearEl.textContent = String(new Date().getFullYear());
@@ -207,6 +235,7 @@
 
     apply(pickLang());
     setupVideoFacades();
+    setupSideNav();
   }
 
   if (document.readyState === "loading") {
