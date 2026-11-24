@@ -227,10 +227,17 @@
     var yearEl = document.getElementById("year");
     if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-    // Contact email (locale-independent).
-    var emailEl = document.getElementById("contact-email");
-    if (emailEl && C.links && C.links.email) {
-      emailEl.setAttribute("href", "mailto:" + C.links.email);
+    // Contact email (locale-independent), assembled here from [user, domain]
+    // so the full address never appears in the page source. See content.js.
+    var parts = C.links && C.links.email;
+    if (parts && parts.length === 2) {
+      var address = parts[0] + String.fromCharCode(64) + parts[1];
+      ["contact-email", "contact-address"].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) el.setAttribute("href", "mailto:" + address);
+      });
+      var addressEl = document.getElementById("contact-address");
+      if (addressEl) addressEl.textContent = address;
     }
 
     document.querySelectorAll(".lang [data-lang]").forEach(function (btn) {

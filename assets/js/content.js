@@ -11,7 +11,10 @@ window.SITE_CONTENT = {
 
   // Locale-independent. A locale's own `links` (e.g. the book edition in that
   // language) takes precedence over these for [data-link].
-  links: { publisher: "https://calzetti-mariucci.it/prodotto/le-espressioni-della-forza", email: "dambrosioemanuele1983@gmail.com" },
+  // `email` is [user, domain] on purpose: with no "@" anywhere in the source,
+  // address harvesters scanning the HTML or this file find nothing. main.js
+  // joins the two parts at runtime for the button and the visible address.
+  links: { publisher: "https://calzetti-mariucci.it/prodotto/le-espressioni-della-forza", email: ["dambrosioemanuele1983", "gmail.com"] },
 
   // Textbooks Emanuele studied — locale-independent titles. Fill from his list.
   studyBooks: [],
@@ -225,7 +228,6 @@ window.SITE_CONTENT = {
       location: "Sporting Club Antares — Gela (CL)",
       emailLabel: "Contattami",
     },
-    footer: { note: "Sito in aggiornamento." },
   },
 
   en: {
@@ -437,6 +439,5 @@ window.SITE_CONTENT = {
       location: "Antares Sporting Club — Gela (CL), Italy",
       emailLabel: "Get in touch",
     },
-    footer: { note: "Site being updated." },
   },
 };
