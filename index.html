@@ -43,6 +43,7 @@
       <nav class="side-nav" aria-label="Sezioni">
         <a href="#about" data-i18n="about.kicker"></a>
         <a href="#book" data-i18n="book.kicker"></a>
+        <a href="#novita" data-i18n="courses.kicker"></a>
         <a href="#story" data-i18n="story.kicker"></a>
         <a href="#athletes" data-i18n="wins.kicker"></a>
         <a href="#education" data-i18n="credentials.kicker"></a>
@@ -54,11 +55,11 @@
         <a href="#contact" data-i18n="contact.kicker"></a>
       </nav>
       <div class="side-cta">
-        <a class="btn btn-primary" data-link="book" data-i18n="hero.ctaBook" href="#"></a>
-        <a class="btn btn-ghost" href="#contact" data-i18n="hero.ctaContact"></a>
         <a class="btn btn-ghost btn-bodygon" href="https://bodygon.com" target="_blank" rel="noopener noreferrer" aria-label="Bodygon">
           <img src="./assets/img/bodygon-logo.svg" alt="Bodygon" width="96" height="19" />
         </a>
+        <a class="btn btn-primary" data-link="book" data-i18n="hero.ctaBook" href="#"></a>
+        <a class="btn btn-ghost" href="#contact" data-i18n="hero.ctaContact"></a>
       </div>
       <nav class="lang side-lang" aria-label="Language switch">
         <button type="button" data-lang="it">IT</button>
@@ -116,6 +117,40 @@
         <figure class="book-figure">
           <img data-i18n-src="book.image" data-i18n-alt="book.imageAlt" src="./assets/img/book-it.jpg" alt="Il libro «Le espressioni della forza» di Emanuele d'Ambrosio" loading="lazy" decoding="async" width="800" height="1200" />
         </figure>
+      </section>
+
+      <!-- WHAT'S NEW: the Bodygon courses Emanuele teaches -->
+      <section class="section courses-band" id="novita">
+        <p class="kicker" data-i18n="courses.kicker"></p>
+        <h2 class="section-title" data-i18n="courses.title"></h2>
+        <p class="courses-intro" data-i18n="courses.intro"></p>
+        <div class="course-cards">
+          <article class="course-card">
+            <div class="carousel" data-carousel="coursePhotos" role="group" aria-roledescription="carousel">
+              <div class="carousel-track"></div>
+              <button type="button" class="carousel-btn carousel-prev" data-dir="-1"><span aria-hidden="true">&lsaquo;</span></button>
+              <button type="button" class="carousel-btn carousel-next" data-dir="1"><span aria-hidden="true">&rsaquo;</span></button>
+              <span class="carousel-count" aria-live="polite"></span>
+            </div>
+            <div class="course-body">
+              <p class="course-label" data-i18n="courses.liveLabel"></p>
+              <h3 class="course-title" data-i18n="courses.liveTitle"></h3>
+              <p data-i18n="courses.liveText"></p>
+              <ul class="course-list" data-i18n-list="courses.liveFacts"></ul>
+              <a class="btn btn-primary" data-link="courses" data-i18n="courses.liveCta" href="#"></a>
+            </div>
+          </article>
+          <article class="course-card">
+            <img data-i18n-alt="courses.videoAlt" src="./assets/img/videocorsi-bodygon.jpg" alt="" loading="lazy" decoding="async" width="960" height="540" />
+            <div class="course-body">
+              <p class="course-label" data-i18n="courses.videoLabel"></p>
+              <h3 class="course-title" data-i18n="courses.videoTitle"></h3>
+              <p data-i18n="courses.videoText"></p>
+              <ul class="course-list" data-i18n-list="courses.videoItems"></ul>
+              <a class="btn btn-primary" data-link="videocourses" data-i18n="courses.videoCta" href="#"></a>
+            </div>
+          </article>
+        </div>
       </section>
 
       <!-- STORY (narrative) -->

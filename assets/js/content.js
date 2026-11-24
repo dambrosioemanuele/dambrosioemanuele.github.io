@@ -14,7 +14,40 @@ window.SITE_CONTENT = {
   // `email` is [user, domain] on purpose: with no "@" anywhere in the source,
   // address harvesters scanning the HTML or this file find nothing. main.js
   // joins the two parts at runtime for the button and the visible address.
-  links: { publisher: "https://calzetti-mariucci.it/prodotto/le-espressioni-della-forza", email: ["dambrosioemanuele1983", "gmail.com"] },
+  links: { courses: "https://www.bodygon.com/corsi-2027/", videocourses: "https://videocorsi.bodygon.com/courses", publisher: "https://calzetti-mariucci.it/prodotto/le-espressioni-della-forza", email: ["dambrosioemanuele1983", "gmail.com"] },
+
+  // Photos of the courses Emanuele has taught, for the carousel in the
+  // in-person course card (same set and order as bodygon.com/corsi-2027).
+  // Locale-independent files, captions in both languages.
+  coursePhotos: [
+    { src: "./assets/img/corso-bodygon-palestra.jpg", it: "Emanuele d'Ambrosio in piedi al centro di una palestra spiega ai corsisti seduti in cerchio sui cassoni", en: "Emanuele d'Ambrosio standing in the middle of a gym, explaining to course participants sitting in a circle on plyo boxes" },
+    { src: "./assets/img/corsi/milano-2025.jpg", it: "Corsisti seduti in una palestra a Milano durante il corso, con il libro «Le espressioni della forza» in primo piano", en: "Participants sitting in a gym in Milan during the course, with the book «Le espressioni della forza» in the foreground" },
+    { src: "./assets/img/corsi/gela-pegaso-2020.jpg", it: "Emanuele d'Ambrosio spiega la forza massima con una slide proiettata, nell'aula dell'Università Telematica Pegaso di Gela", en: "Emanuele d'Ambrosio explains maximal strength with a projected slide, in the lecture room of Pegaso Telematic University in Gela" },
+    { src: "./assets/img/corsi/cassoni.jpg", it: "Emanuele d'Ambrosio in piedi spiega ai corsisti seduti sui cassoni in una palestra", en: "Emanuele d'Ambrosio, standing, explains to participants sitting on plyo boxes in a gym" },
+    { src: "./assets/img/corsi/dimostrazione-tappetino.jpg", it: "Emanuele d'Ambrosio spiega un esercizio a terra eseguito da una corsista sul tappetino, con il gruppo che osserva", en: "Emanuele d'Ambrosio explains a floor exercise performed by a participant on a mat, with the group watching" },
+    { src: "./assets/img/corsi/dimostrazione.jpg", it: "Emanuele d'Ambrosio mostra un movimento su un corsista, davanti al gruppo seduto", en: "Emanuele d'Ambrosio demonstrates a movement on a participant, in front of the seated group" },
+    { src: "./assets/img/corsi/panca.jpg", it: "Emanuele d'Ambrosio segue una prova in panca piana insieme ad altre persone, in una palestra con il tricolore", en: "Emanuele d'Ambrosio follows a bench press test with other people, in a gym with the Italian flag" },
+    { src: "./assets/img/corsi/tappetino.jpg", it: "Emanuele d'Ambrosio mostra un esercizio a terra con una corsista sul tappetino, davanti al gruppo", en: "Emanuele d'Ambrosio shows a floor exercise with a participant on a mat, in front of the group" },
+    { src: "./assets/img/corsi/in-piedi.jpg", it: "Emanuele d'Ambrosio e i corsisti in piedi osservano una prova pratica in una sala", en: "Emanuele d'Ambrosio and the participants, standing, watch a practical test in a hall" },
+    { src: "./assets/img/corsi/postura.jpg", it: "Emanuele d'Ambrosio osserva un corsista piegato in avanti durante una valutazione, con il gruppo intorno", en: "Emanuele d'Ambrosio observes a participant bending forward during an assessment, with the group around" },
+    { src: "./assets/img/corsi/palestra-terra.jpg", it: "Emanuele d'Ambrosio in piedi in palestra spiega ai partecipanti seduti a terra, che prendono appunti", en: "Emanuele d'Ambrosio, standing in a gym, explains to participants sitting on the floor and taking notes" },
+    { src: "./assets/img/corsi/ring.jpg", it: "Emanuele d'Ambrosio a bordo ring con tre pugili", en: "Emanuele d'Ambrosio at the ringside with three boxers" },
+    { src: "./assets/img/corsi/cassoni-cerchio.jpg", it: "Corsisti seduti in cerchio sui cassoni ascoltano Emanuele d'Ambrosio, in piedi al centro della palestra", en: "Participants sitting in a circle on plyo boxes listen to Emanuele d'Ambrosio, standing in the middle of the gym" },
+    { src: "./assets/img/corsi/centro-sportivo.jpg", it: "Emanuele d'Ambrosio con altre due persone in un centro sportivo, sotto le maglie incorniciate di Baggio e Maldini", en: "Emanuele d'Ambrosio with two other people at a sports centre, under the framed shirts of Baggio and Maldini" },
+    { src: "./assets/img/corsi/lezione-2014.jpg", it: "Emanuele d'Ambrosio alla cattedra spiega a una sala piena di partecipanti, con un grafico proiettato alle spalle", en: "Emanuele d'Ambrosio at the lectern speaks to a full room of participants, with a chart projected behind him" },
+    { src: "./assets/img/corsi/la-spezia-2016.jpg", it: "Articolo di giornale del 1 febbraio 2016 sullo stage di trenta ore per preparatori atletici degli sport da combattimento tenuto da Emanuele d'Ambrosio a Ceparana, La Spezia", en: "Newspaper article of 1 February 2016 on the thirty-hour workshop for combat-sports strength coaches held by Emanuele d'Ambrosio in Ceparana, La Spezia" },
+    { src: "./assets/img/corsi/lezione-2014-sala.jpg", it: "Una sala piena di partecipanti segue Emanuele d'Ambrosio, seduto alla cattedra davanti a una tabella proiettata", en: "A full room of participants follows Emanuele d'Ambrosio, seated at the lectern in front of a projected table" },
+    { src: "./assets/img/corsi/seduti.jpg", it: "Un corso in una sala fitness, con i corsisti seduti in cerchio che prendono appunti mentre Emanuele d'Ambrosio spiega", en: "A course in a fitness room, with participants sitting in a circle taking notes while Emanuele d'Ambrosio explains" },
+    { src: "./assets/img/corsi/dati.jpg", it: "Emanuele d'Ambrosio e altre tre persone leggono su tablet e computer i dati di una prova, in un centro sportivo", en: "Emanuele d'Ambrosio and three other people read the data of a test on a tablet and a computer, at a sports centre" },
+    { src: "./assets/img/corsi/aula.jpg", it: "Emanuele d'Ambrosio in piedi accanto alla proiezione spiega a una sala di partecipanti seduti", en: "Emanuele d'Ambrosio, standing next to the projection, explains to a room of seated participants" },
+    { src: "./assets/img/corsi/gruppo.jpg", it: "Foto di gruppo all'aperto con Emanuele d'Ambrosio e i partecipanti", en: "Outdoor group photo with Emanuele d'Ambrosio and the participants" },
+    { src: "./assets/img/corsi/sala.jpg", it: "Emanuele d'Ambrosio in piedi spiega ai partecipanti seduti al tavolo, con una slide proiettata alle spalle", en: "Emanuele d'Ambrosio, standing, explains to participants seated at a table, with a slide projected behind him" },
+    { src: "./assets/img/corsi/sala-riunioni.jpg", it: "Emanuele d'Ambrosio spiega la mobilità articolare a un tavolo di corsisti, con la slide proiettata alle spalle", en: "Emanuele d'Ambrosio explains joint mobility to a table of participants, with the slide projected behind him" },
+    { src: "./assets/img/corsi/pedane.jpg", it: "Emanuele d'Ambrosio in piedi spiega ai corsisti seduti sulle pedane da step in una palestra", en: "Emanuele d'Ambrosio, standing, explains to participants sitting on step platforms in a gym" },
+    { src: "./assets/img/corsi/plicometro.jpg", it: "Emanuele d'Ambrosio mostra un plicometro in un selfie con i corsisti seduti alle sue spalle", en: "Emanuele d'Ambrosio shows a skinfold caliper in a selfie with the participants sitting behind him" },
+    { src: "./assets/img/corsi/libri.jpg", it: "Selfie di Emanuele d'Ambrosio con i corsisti seduti in palestra, ognuno con un libro in mano", en: "Selfie of Emanuele d'Ambrosio with the participants sitting in a gym, each holding a book" },
+    { src: "./assets/img/corsi/foto-gruppo.jpg", it: "Foto di gruppo in sala pesi con Emanuele d'Ambrosio e i corsisti", en: "Group photo in the weights room with Emanuele d'Ambrosio and the participants" },
+  ],
 
   // Textbooks Emanuele studied — locale-independent titles. Fill from his list.
   studyBooks: [],
@@ -210,6 +243,35 @@ window.SITE_CONTENT = {
       cta: "Scopri il libro",
       image: "./assets/img/book-it.jpg",
       imageAlt: "Il libro «Le espressioni della forza» di Emanuele d'Ambrosio, fronte e retro",
+    },
+    ui: { prev: "Foto precedente", next: "Foto successiva", close: "Chiudi", enlarge: "Ingrandisci", photos: "Foto dei corsi" },
+    courses: {
+      kicker: "Novità",
+      title: "Corsi e videocorsi Bodygon",
+      intro:
+        "Quello che racconto nel libro adesso lo insegno nei corsi Bodygon: in presenza, nei centri sportivi, e in tre videocorsi che ho registrato.",
+      liveLabel: "Corso in presenza · 2027",
+      liveTitle: "Corso Bodygon. Le espressioni della forza",
+      liveText:
+        "Sedici ore di teoria e pratica, il sabato e la domenica, in un centro sportivo. Il docente sono io. Si parte dalle cinque espressioni della forza e dalla metodologia di Bosco, poi serie lenta, lavoro isometrico e metodo trifasico, e il Bodygon lo usi su di te.",
+      liveFacts: [
+        "Dieci città da gennaio a maggio 2027: Perugia, Brindisi, Milano, Roma, Padova, Bologna, Napoli, Caltagirone, La Spezia, Cagliari",
+        "Venti posti per sede",
+        "Attestato con CNS Libertas, ente di promozione sportiva riconosciuto dal CONI",
+        "Il libro «Le espressioni della forza» è compreso",
+      ],
+      liveCta: "Scopri il corso",
+      videoLabel: "Videocorsi",
+      videoTitle: "Videocorsi Bodygon. Le espressioni della forza",
+      videoText:
+        "Tre videocorsi che ho registrato per chi vuole studiare il metodo con i suoi tempi, due ore e mezza in tutto. Si possono prendere tutti e tre insieme o uno alla volta.",
+      videoItems: [
+        "L'allenamento della forza basato sulla potenza · 1 ora e 21 minuti",
+        "Isometria funzionale e stato dinamico specifico · 32 minuti",
+        "Allenamento della forza a bassa velocità · 37 minuti",
+      ],
+      videoCta: "Guarda i videocorsi",
+      videoAlt: "Emanuele d'Ambrosio alla scrivania presenta i tre videocorsi Bodygon",
     },
     news: {
       kicker: "Aggiornamenti",
@@ -421,6 +483,36 @@ window.SITE_CONTENT = {
       cta: "Discover the book",
       image: "./assets/img/book-en.jpg",
       imageAlt: "The book «The Expressions of Strength» by Emanuele d'Ambrosio on a bookshelf",
+    },
+    ui: { prev: "Previous photo", next: "Next photo", close: "Close", enlarge: "Enlarge", photos: "Course photos" },
+    courses: {
+      kicker: "What's new",
+      title: "Bodygon courses and video courses",
+      intro:
+        "What I write about in the book, I now teach in the Bodygon courses: in person, at sports centres across Italy, and in three video courses I recorded. All of them are in Italian.",
+      liveLabel: "In-person course · 2027",
+      liveTitle: "Bodygon course «Le espressioni della forza»",
+      liveText:
+        "Sixteen hours of theory and practice over a weekend at a sports centre, taught by me. We start from the five expressions of strength and Bosco's methodology, then slow-tempo sets, isometric work and the triphasic method, and you use the Bodygon on yourself.",
+      liveFacts: [
+        "Ten Italian cities from January to May 2027: Perugia, Brindisi, Milan, Rome, Padua, Bologna, Naples, Caltagirone, La Spezia, Cagliari",
+        "Twenty places per venue",
+        "Certificate issued with CNS Libertas, a sports promotion body recognised by CONI",
+        "The book «Le espressioni della forza» is included",
+        "Taught in Italian",
+      ],
+      liveCta: "Discover the course",
+      videoLabel: "Video courses",
+      videoTitle: "Bodygon video courses «Le espressioni della forza»",
+      videoText:
+        "Three video courses I recorded for anyone who wants to study the method at their own pace, two and a half hours in total. Available all three together or one at a time. In Italian, with Italian subtitles.",
+      videoItems: [
+        "Power-based strength training · 1 h 21 min",
+        "Functional isometrics and the specific static-dynamic method · 32 min",
+        "Slow-tempo strength training · 37 min",
+      ],
+      videoCta: "Watch the video courses",
+      videoAlt: "Emanuele d'Ambrosio at his desk presenting the three Bodygon video courses",
     },
     news: {
       kicker: "Updates",
